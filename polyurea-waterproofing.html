@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Danket Plus - Modern solutions and professional project design. Group of companies.">
+    <title>Danket Plus</title>
+    <!-- Responsive Preload for LCP Hero Background Images -->
+    <link rel="preload" href="assets/images/hero_bg-mobile.webp" as="image" type="image/webp"
+        media="(max-width: 480px)">
+    <link rel="preload" href="assets/images/hero_bg.webp" as="image" type="image/webp" media="(min-width: 481px)">
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Asynchronous Google Fonts Loading to prevent render blocking -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<style>
+    .hero__card {
+        background: linear-gradient(90deg, #739EC9 47.69%, rgba(115, 158, 201, 0.00) 72.11%),
+            url('assets/images/polyurea-waterproofing_main-bg.png');
+    }
+
+    .hero__content {
+        max-width: 647px;
+    }
+
+    .hero {
+        margin-bottom: 100px;
+    }
+
+    @media (max-width: 1025px) {
+        .hero {
+            margin-bottom: 80px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            margin-bottom: 80px;
+        }
+
+        .hero__card {
+            background-image: url('assets/images/polyurea-waterproofing_main-bg_mobile.png');
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <!-- Sticky Header -->
+        <header class="header">
+            <div class="container header__container">
+                <a href="#" class="logo" aria-label="Danket Plus Home">
+                    <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
+                    <span class="logo__subtext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="7" viewBox="0 0 117 7" fill="none">
+                            <path d="M0 6.90212V1.5338H3.38183V2.16266H0.722481V6.90212H0Z" fill="black" />
+                            <path
+                                d="M6.83721 6.90212V1.5338H8.68184C9.15837 1.5338 9.54779 1.60538 9.8501 1.74854C10.1575 1.88658 10.3856 2.08086 10.5342 2.33138C10.6828 2.57679 10.757 2.86055 10.757 3.18264C10.757 3.49963 10.6828 3.78338 10.5342 4.03391C10.3856 4.28443 10.1575 4.48127 9.8501 4.62442C9.54779 4.76246 9.15837 4.83148 8.68184 4.83148H7.55969V6.90212H6.83721ZM7.55969 4.20262H8.64341C9.15581 4.20262 9.51448 4.1106 9.71944 3.92654C9.92953 3.74248 10.0346 3.49452 10.0346 3.18264C10.0346 2.87077 9.92953 2.62281 9.71944 2.43875C9.51448 2.25469 9.15581 2.16266 8.64341 2.16266H7.55969V4.20262Z"
+                                fill="black" />
+                            <path
+                                d="M15.142 6.97881C15.0856 6.97881 15.0292 6.97625 14.9729 6.97114C14.9216 6.97114 14.8755 6.96859 14.8345 6.96347V6.31928C14.8755 6.32439 14.9216 6.3295 14.9729 6.33461C15.0292 6.33461 15.0856 6.33461 15.142 6.33461C15.2905 6.33461 15.4084 6.31672 15.4955 6.28093C15.5877 6.24514 15.6672 6.18123 15.7338 6.0892C15.8004 5.99718 15.8696 5.86425 15.9413 5.69042L13.72 1.5338H14.504L16.3025 4.94652L17.8244 1.5338H18.5622L16.6023 5.85146C16.5152 6.04575 16.4255 6.21447 16.3333 6.35762C16.241 6.50078 16.1386 6.61837 16.0258 6.7104C15.9131 6.80242 15.785 6.86889 15.6415 6.90979C15.4981 6.9558 15.3315 6.97881 15.142 6.97881Z"
+                                fill="black" />
+                            <path d="M22.0203 6.90212V1.5338H26.2476V6.90212H25.5251V2.16266H22.7428V6.90212H22.0203Z"
+                                fill="black" />
+                            <path d="M30.3211 6.90212V1.5338H34.5484V6.90212H33.8259V2.16266H31.0436V6.90212H30.3211Z"
+                                fill="black" />
+                            <path
+                                d="M38.0071 6.90212L40.0669 1.5338H40.7894L42.8493 6.90212H42.0653L41.5503 5.56771H39.2753L38.7603 6.90212H38.0071ZM39.5135 4.93885H41.3121L40.4128 2.45409L39.5135 4.93885Z"
+                                fill="black" />
+                            <path
+                                d="M53.8396 6.90212V1.5338H54.5621V3.84218H55.1769L57.2829 1.5338H58.1437L55.7918 4.09526L58.2206 6.90212H57.2983L55.1769 4.44036H54.5621V6.90212H53.8396Z"
+                                fill="black" />
+                            <path
+                                d="M63.6827 6.97881C63.3753 6.97881 63.0781 6.92768 62.7912 6.82543C62.5093 6.71806 62.2557 6.55446 62.0302 6.33461C61.8048 6.11477 61.6255 5.83357 61.4922 5.49102C61.3641 5.14847 61.3001 4.7369 61.3001 4.25631V4.10293C61.3001 3.64279 61.3641 3.24655 61.4922 2.91423C61.6255 2.5819 61.8048 2.30838 62.0302 2.09364C62.2557 1.8738 62.5093 1.71275 62.7912 1.61049C63.0781 1.50824 63.3753 1.45711 63.6827 1.45711C63.9902 1.45711 64.2848 1.50824 64.5666 1.61049C64.8536 1.71275 65.1098 1.8738 65.3352 2.09364C65.5607 2.30838 65.7374 2.5819 65.8655 2.91423C65.9988 3.24655 66.0654 3.64279 66.0654 4.10293V4.25631C66.0654 4.7369 65.9988 5.14847 65.8655 5.49102C65.7374 5.83357 65.5607 6.11477 65.3352 6.33461C65.1098 6.55446 64.8536 6.71806 64.5666 6.82543C64.2848 6.92768 63.9902 6.97881 63.6827 6.97881ZM63.6827 6.33461C63.9645 6.33461 64.2259 6.26559 64.4667 6.12755C64.7126 5.98951 64.9125 5.76711 65.0662 5.46034C65.2199 5.15358 65.2968 4.75224 65.2968 4.25631V4.10293C65.2968 3.63256 65.2199 3.25167 65.0662 2.96024C64.9125 2.66371 64.7126 2.44642 64.4667 2.30838C64.2259 2.17033 63.9645 2.10131 63.6827 2.10131C63.406 2.10131 63.1447 2.17033 62.8988 2.30838C62.6528 2.44642 62.453 2.66371 62.2993 2.96024C62.1455 3.25167 62.0687 3.63256 62.0687 4.10293V4.25631C62.0687 4.75224 62.1455 5.15358 62.2993 5.46034C62.453 5.76711 62.6528 5.98951 62.8988 6.12755C63.1447 6.26559 63.406 6.33461 63.6827 6.33461Z"
+                                fill="black" />
+                            <path
+                                d="M69.8333 6.90212V1.5338H70.5865L72.385 4.94652L74.1836 1.5338H74.906V6.90212H74.1836V2.83754L72.6387 5.75177H72.1007L70.5558 2.83754V6.90212H69.8333Z"
+                                fill="black" />
+                            <path d="M78.9823 6.90212V1.5338H83.2096V6.90212H82.4871V2.16266H79.7048V6.90212H78.9823Z"
+                                fill="black" />
+                            <path
+                                d="M86.6683 6.90212L88.7281 1.5338H89.4506L91.5104 6.90212H90.7265L90.2115 5.56771H87.9365L87.4215 6.90212H86.6683ZM88.1747 4.93885H89.9732L89.074 2.45409L88.1747 4.93885Z"
+                                fill="black" />
+                            <path
+                                d="M94.9685 6.90212V1.5338H95.691V3.82684H98.5502V1.5338H99.2727V6.90212H98.5502V4.4557H95.691V6.90212H94.9685Z"
+                                fill="black" />
+                            <path
+                                d="M103.344 6.90212V1.5338H104.067V5.75177L106.926 1.5338H107.649V6.90212H106.926V2.68416L104.067 6.90212H103.344Z"
+                                fill="black" />
+                            <path
+                                d="M111.72 6.90212V1.5338H112.443V5.75177L115.302 1.5338H116.024V6.90212H115.302V2.68416L112.443 6.90212H111.72ZM113.872 1.15035C113.585 1.15035 113.345 1.1069 113.15 1.01998C112.955 0.933064 112.809 0.805247 112.712 0.636529C112.614 0.462698 112.566 0.250522 112.566 0H113.242C113.242 0.235183 113.296 0.403902 113.404 0.506155C113.511 0.608409 113.667 0.659536 113.872 0.659536C114.082 0.659536 114.241 0.608409 114.349 0.506155C114.462 0.403902 114.518 0.235183 114.518 0H115.179C115.179 0.250522 115.13 0.462698 115.033 0.636529C114.936 0.805247 114.79 0.933064 114.595 1.01998C114.405 1.1069 114.164 1.15035 113.872 1.15035Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                </a>
+
+                <nav class="header__nav" aria-label="Main Navigation">
+                    <ul class="header__nav-list">
+                        <li><a href="#services" class="header__nav-link">Services</a></li>
+                        <li><a href="#applications" class="header__nav-link">Applications</a></li>
+                        <li><a href="#process" class="header__nav-link">Process</a></li>
+                        <li><a href="#projects" class="header__nav-link">Projects</a></li>
+                        <li><a href="#contacts" class="header__nav-link">Contacts</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Actions -->
+                <div class="header__actions">
+                    <a href="https://wa.me/971582559902" class="header__whatsapp" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="assets/images/watsapp-icon.svg" alt="WhatsApp Icon" width="20" height="20"
+                            loading="lazy">
+                        <span>+971 58 255 9902</span>
+                    </a>
+                    <a href="#contact" class="btn btn--primary header__cta">Describe Your Project</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="header__burger" id="burgerToggle" aria-label="Open Menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <img src="assets/images/burger-icon.svg" alt="Menu Icon" width="24" height="24">
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu Overlay -->
+            <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true"
+                aria-label="Mobile Navigation Menu">
+                <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+                <div class="mobile-menu__content">
+                    <div class="mobile-menu__header">
+                        <a href="#" class="logo" aria-label="Danket Plus Home">
+                            <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
+                            <span class="logo__subtext">ГРУППА КОМПАНИЙ</span>
+                        </a>
+                        <button class="mobile-menu__close" id="menuClose" aria-label="Close Menu">&times;</button>
+                    </div>
+                    <nav class="mobile-menu__nav" aria-label="Mobile Navigation Links">
+                        <ul class="mobile-menu__list">
+                            <li><a href="#services" class="mobile-menu__link">Services</a></li>
+                            <li><a href="#applications" class="mobile-menu__link">Applications</a></li>
+                            <li><a href="#process" class="mobile-menu__link">Process</a></li>
+                            <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+                            <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu__actions">
+                        <a href="https://wa.me/971582559902" class="mobile-menu__whatsapp" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="assets/images/watsapp-icon.svg" alt="WhatsApp Icon" width="20" height="20">
+                            <span>+971 58 255 9902</span>
+                        </a>
+                        <a href="#contact" class="btn btn--primary mobile-menu__cta">Describe Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="hero_inner">
+                    <div class="hero__card">
+                        <div class="hero__content">
+                            <!-- Breadcrumbs -->
+                            <div class="breadcrumbs">
+                                <a href="#" class="breadcrumbs__link">Home</a>
+                                <span class="breadcrumbs__separator"></span>
+                                <span class="breadcrumbs__current">Сontacts</span>
+                            </div>
+
+                            <div class="block__inner">
+                                <div class="title-block">
+                                    <h1 class="hero__title hero__title--desktop">Polyurea Waterproofing in Dubai —
+                                        Roofs, Pools & Foundations</h1>
+                                    <h1 class="hero__title hero__title--mobile">Polyurea Waterproofing in Dubai — Roofs,
+                                        Pools & Foundations</h1>
+
+                                    <!-- Hero Description -->
+                                    <p class="hero__text hero__text--desktop">
+                                        Spray-applied seamless waterproofing membrane for commercial, industrial and
+                                        residential structures. Covers flat roofs, swimming pools, foundations, terraces
+                                        and underground car parks.
+                                    </p>
+                                    <p class="hero__text hero__text--tablet">
+                                        Spray polyurethane foam reduces overheating of structures and indoor spaces,
+                                        stabilising internal temperatures and lowering the load on air conditioning
+                                        systems.
+                                    </p>
+                                </div>
+                                <!-- Hero CTA Actions -->
+                                <div class="hero__actions">
+                                    <a href="#contact" class="btn btn--accent desktop-btn">Describe Your Project</a>
+                                    <a href="#services" class="btn btn--outline desktop-btn">Request Inspection</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Features Section -->
+                    <div class="features-section">
+                        <div class="features-grid">
+                            <div class="features-grid__left">
+                                <div class="feature-card">
+                                    <p class="feature-card__text">Seamless membrane — no seams, no overlaps, no weak
+                                        joints
+                                    </p>
+                                    <span class="feature-card__check">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.83366 11.5L7.04199 9.70835C6.88922 9.55558 6.69477 9.47919 6.45866 9.47919C6.22255 9.47919 6.0281 9.55558 5.87533 9.70835C5.72255 9.86113 5.64616 10.0556 5.64616 10.2917C5.64616 10.5278 5.72255 10.7222 5.87533 10.875L8.25033 13.25C8.41699 13.4167 8.61144 13.5 8.83366 13.5C9.05588 13.5 9.25033 13.4167 9.41699 13.25L14.1253 8.54169C14.2781 8.38891 14.3545 8.19447 14.3545 7.95835C14.3545 7.72224 14.2781 7.5278 14.1253 7.37502C13.9725 7.22224 13.7781 7.14585 13.542 7.14585C13.3059 7.14585 13.1114 7.22224 12.9587 7.37502L8.83366 11.5ZM10.0003 18.3334C8.84755 18.3334 7.76422 18.1145 6.75033 17.6767C5.73644 17.2389 4.85449 16.6453 4.10449 15.8959C3.35449 15.1464 2.76088 14.2645 2.32366 13.25C1.88644 12.2356 1.66755 11.1522 1.66699 10C1.66644 8.8478 1.88533 7.76447 2.32366 6.75002C2.76199 5.73558 3.3556 4.85363 4.10449 4.10419C4.85338 3.35474 5.73533 2.76113 6.75033 2.32335C7.76533 1.88558 8.84866 1.66669 10.0003 1.66669C11.152 1.66669 12.2353 1.88558 13.2503 2.32335C14.2653 2.76113 15.1473 3.35474 15.8962 4.10419C16.6451 4.85363 17.2389 5.73558 17.6778 6.75002C18.1167 7.76447 18.3353 8.8478 18.3337 10C18.332 11.1522 18.1131 12.2356 17.677 13.25C17.2409 14.2645 16.6473 15.1464 15.8962 15.8959C15.1451 16.6453 14.2631 17.2392 13.2503 17.6775C12.2375 18.1159 11.1542 18.3345 10.0003 18.3334Z"
+                                                fill="#739EC9" />
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="feature-card">
+                                    <p class="feature-card__text">Fast cure: surface ready within minutes after
+                                        application
+                                    </p>
+                                    <span class="feature-card__check">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.83366 11.5L7.04199 9.70835C6.88922 9.55558 6.69477 9.47919 6.45866 9.47919C6.22255 9.47919 6.0281 9.55558 5.87533 9.70835C5.72255 9.86113 5.64616 10.0556 5.64616 10.2917C5.64616 10.5278 5.72255 10.7222 5.87533 10.875L8.25033 13.25C8.41699 13.4167 8.61144 13.5 8.83366 13.5C9.05588 13.5 9.25033 13.4167 9.41699 13.25L14.1253 8.54169C14.2781 8.38891 14.3545 8.19447 14.3545 7.95835C14.3545 7.72224 14.2781 7.5278 14.1253 7.37502C13.9725 7.22224 13.7781 7.14585 13.542 7.14585C13.3059 7.14585 13.1114 7.22224 12.9587 7.37502L8.83366 11.5ZM10.0003 18.3334C8.84755 18.3334 7.76422 18.1145 6.75033 17.6767C5.73644 17.2389 4.85449 16.6453 4.10449 15.8959C3.35449 15.1464 2.76088 14.2645 2.32366 13.25C1.88644 12.2356 1.66755 11.1522 1.66699 10C1.66644 8.8478 1.88533 7.76447 2.32366 6.75002C2.76199 5.73558 3.3556 4.85363 4.10449 4.10419C4.85338 3.35474 5.73533 2.76113 6.75033 2.32335C7.76533 1.88558 8.84866 1.66669 10.0003 1.66669C11.152 1.66669 12.2353 1.88558 13.2503 2.32335C14.2653 2.76113 15.1473 3.35474 15.8962 4.10419C16.6451 4.85363 17.2389 5.73558 17.6778 6.75002C18.1167 7.76447 18.3353 8.8478 18.3337 10C18.332 11.1522 18.1131 12.2356 17.677 13.25C17.2409 14.2645 16.6473 15.1464 15.8962 15.8959C15.1451 16.6453 14.2631 17.2392 13.2503 17.6775C12.2375 18.1159 11.1542 18.3345 10.0003 18.3334Z"
+                                                fill="#739EC9" />
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="feature-card">
+                                    <p class="feature-card__text">Thickness: <span class="highlight-orange">2–4
+                                            mm</span>
+                                        applied in one system</p>
+                                    <span class="feature-card__check">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.83366 11.5L7.04199 9.70835C6.88922 9.55558 6.69477 9.47919 6.45866 9.47919C6.22255 9.47919 6.0281 9.55558 5.87533 9.70835C5.72255 9.86113 5.64616 10.0556 5.64616 10.2917C5.64616 10.5278 5.72255 10.7222 5.87533 10.875L8.25033 13.25C8.41699 13.4167 8.61144 13.5 8.83366 13.5C9.05588 13.5 9.25033 13.4167 9.41699 13.25L14.1253 8.54169C14.2781 8.38891 14.3545 8.19447 14.3545 7.95835C14.3545 7.72224 14.2781 7.5278 14.1253 7.37502C13.9725 7.22224 13.7781 7.14585 13.542 7.14585C13.3059 7.14585 13.1114 7.22224 12.9587 7.37502L8.83366 11.5ZM10.0003 18.3334C8.84755 18.3334 7.76422 18.1145 6.75033 17.6767C5.73644 17.2389 4.85449 16.6453 4.10449 15.8959C3.35449 15.1464 2.76088 14.2645 2.32366 13.25C1.88644 12.2356 1.66755 11.1522 1.66699 10C1.66644 8.8478 1.88533 7.76447 2.32366 6.75002C2.76199 5.73558 3.3556 4.85363 4.10449 4.10419C4.85338 3.35474 5.73533 2.76113 6.75033 2.32335C7.76533 1.88558 8.84866 1.66669 10.0003 1.66669C11.152 1.66669 12.2353 1.88558 13.2503 2.32335C14.2653 2.76113 15.1473 3.35474 15.8962 4.10419C16.6451 4.85363 17.2389 5.73558 17.6778 6.75002C18.1167 7.76447 18.3353 8.8478 18.3337 10C18.332 11.1522 18.1131 12.2356 17.677 13.25C17.2409 14.2645 16.6473 15.1464 15.8962 15.8959C15.1451 16.6453 14.2631 17.2392 13.2503 17.6775C12.2375 18.1159 11.1542 18.3345 10.0003 18.3334Z"
+                                                fill="#739EC9" />
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="feature-card">
+                                    <p class="feature-card__text">Elastic: withstands structural movement and
+                                        thermal
+                                        cycling</p>
+                                    <span class="feature-card__check">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M8.83366 11.5L7.04199 9.70835C6.88922 9.55558 6.69477 9.47919 6.45866 9.47919C6.22255 9.47919 6.0281 9.55558 5.87533 9.70835C5.72255 9.86113 5.64616 10.0556 5.64616 10.2917C5.64616 10.5278 5.72255 10.7222 5.87533 10.875L8.25033 13.25C8.41699 13.4167 8.61144 13.5 8.83366 13.5C9.05588 13.5 9.25033 13.4167 9.41699 13.25L14.1253 8.54169C14.2781 8.38891 14.3545 8.19447 14.3545 7.95835C14.3545 7.72224 14.2781 7.5278 14.1253 7.37502C13.9725 7.22224 13.7781 7.14585 13.542 7.14585C13.3059 7.14585 13.1114 7.22224 12.9587 7.37502L8.83366 11.5ZM10.0003 18.3334C8.84755 18.3334 7.76422 18.1145 6.75033 17.6767C5.73644 17.2389 4.85449 16.6453 4.10449 15.8959C3.35449 15.1464 2.76088 14.2645 2.32366 13.25C1.88644 12.2356 1.66755 11.1522 1.66699 10C1.66644 8.8478 1.88533 7.76447 2.32366 6.75002C2.76199 5.73558 3.3556 4.85363 4.10449 4.10419C4.85338 3.35474 5.73533 2.76113 6.75033 2.32335C7.76533 1.88558 8.84866 1.66669 10.0003 1.66669C11.152 1.66669 12.2353 1.88558 13.2503 2.32335C14.2653 2.76113 15.1473 3.35474 15.8962 4.10419C16.6451 4.85363 17.2389 5.73558 17.6778 6.75002C18.1167 7.76447 18.3353 8.8478 18.3337 10C18.332 11.1522 18.1131 12.2356 17.677 13.25C17.2409 14.2645 16.6473 15.1464 15.8962 15.8959C15.1451 16.6453 14.2631 17.2392 13.2503 17.6775C12.2375 18.1159 11.1542 18.3345 10.0003 18.3334Z"
+                                                fill="#739EC9" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="features-grid__right">
+                                <div class="blue-feature-card">
+                                    <p class="blue-feature-card__text">
+                                        SERVICE LIFE: UP TO 20–30 YEARS WHEN CORRECTLY APPLIED AND MAINTAINED
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <!-- Footer Orange CTA Card -->
+                <div class="footer-cta">
+                    <div class="footer-cta__content">
+                        <h2 class="footer-cta__title footer-cta__title--desktop">Ready to discuss your project?</h2>
+                        <h2 class="footer-cta__title footer-cta__title--mobile">Tell us about your project</h2>
+                        <p class="footer-cta__description">Send us drawings, a BOQ or a project description. We will
+                            review the scope and get back to you.</p>
+                    </div>
+                    <div class="footer-cta__actions">
+                        <a href="#contact" class="footer-cta__btn">
+                            <span class="footer-cta__btn-text footer-cta__btn-text--desktop">Fill in the Contact
+                                Form</span>
+                            <span class="footer-cta__btn-text footer-cta__btn-text--mobile">Describe Your
+                                Project</span>
+                            <span class="footer-cta__btn-icon">
+                                <img src="assets/images/arrow-up-right.svg" alt="arrow-up-right.svg" width="60"
+                                    height="60" loading="lazy">
+                            </span>
+                        </a>
+                        <a href="https://wa.me/971582559902" class="footer-cta__btn" target="_blank">
+                            <span class="footer-cta__btn-text footer-cta__btn-text--green">+971 58 255 9902</span>
+                            <span class="footer-cta__btn-icon">
+                                <img src="assets/images/footer_watsapp.webp" alt="WhatsApp"
+                                    class="footer-cta__whatsapp-icon" width="60" height="60" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Columns -->
+                <div class="footer-grid">
+                    <!-- Info Column -->
+                    <div class="footer-col footer-col--info">
+                        <p class="footer-info-text">Polyurea waterproofing and SPF insulation solutions for
+                            commercial,
+                            industrial and residential projects across Dubai and the UAE.</p>
+                        <div class="footer-copyright">
+                            <span>&copy; 2009-2026 DANKETPLUS</span>
+                            <div class="footer-legal-links">
+                                <a href="#" class="footer-link">Privacy Policy</a>
+                                <a href="#" class="footer-link">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Column -->
+                    <div class="footer-col footer-col--services">
+                        <h4 class="footer-col-title">Services</h4>
+                        <ul class="footer-col-list">
+                            <li><a href="#" class="footer-link">SPF Insulation</a></li>
+                            <li><a href="#" class="footer-link">Polyurea Waterproofing</a></li>
+                            <li><a href="#" class="footer-link">SPF + Polyurea System</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Column -->
+                    <div class="footer-col footer-col--company">
+                        <h4 class="footer-col-title">Company</h4>
+                        <ul class="footer-col-list">
+                            <li><a href="#" class="footer-link">Projects</a></li>
+                            <li><a href="#" class="footer-link">Why Choose Us</a></li>
+                            <li><a href="#" class="footer-link">How We Work</a></li>
+                            <li><a href="#" class="footer-link">Contacts</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts Card Column -->
+                    <div class="footer-col footer-col--contacts">
+                        <div class="footer-contacts-card">
+                            <ul class="footer-contacts-list">
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">WhatsApp / Phone:</span>
+                                    </div>
+                                    <div class="footer-contacts-content">
+                                        <a href="https://wa.me/971582559902" class="footer-contacts-value"
+                                            target="_blank">+971 58 255 9902</a>
+
+                                    </div>
+                                </li>
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">Email:</span>
+                                    </div>
+
+                                    <div class="footer-contacts-content">
+                                        <a href="mailto:info@danketplus.ru"
+                                            class="footer-contacts-value">info@danketplus.ru</a>
+                                    </div>
+                                </li>
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">Instagram:</span>
+                                    </div>
+                                    <div class="footer-contacts-content">
+                                        <a href="https://instagram.com/danketplus.ae" class="footer-contacts-value"
+                                            target="_blank">@danketplus.ae</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Translucent Giant Logo Background -->
+                <div class="footer-bg-logo">
+                    <img src="assets/images/footer-logo1.svg" alt="DANKET" class="footer-bg-logo__text" width="982"
+                        height="184" loading="lazy">
+                    <img src="assets/images/footer-logo2.svg" alt="+" class="footer-bg-logo__plus" width="191"
+                        height="184" loading="lazy">
+                </div>
+            </div>
+        </footer>
+
+        <!-- Inline script for mobile menu toggling (PageSpeed optimized, zero request overhead) -->
+        <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
