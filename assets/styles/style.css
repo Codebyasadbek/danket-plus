@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Danket Plus Header Styling (SCSS)
-   Pixel-perfect, PageSpeed-optimized, and fully responsive
-   ========================================================================== */
+  Danket Plus Header Styling (SCSS)
+  Pixel-perfect, PageSpeed-optimized, and fully responsive
+  ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -5313,7 +5313,7 @@ body {
 }
 .hero--main .hero__card {
   align-items: flex-end;
-  background: url("../images/main-page_main-bg.png");
+  background: url("../images/main-page_main-bg.webp");
 }
 @media (max-width: 1024px) {
   .hero--main .hero__card {
@@ -5323,7 +5323,7 @@ body {
 @media (max-width: 480px) {
   .hero--main .hero__card {
     height: 410px;
-    background-image: url("../images/main-page_main-bg_mobile.png");
+    background-image: url("../images/main-page_main-bg_mobile.webp");
   }
 }
 .hero--main .hero__content {

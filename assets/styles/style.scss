@@ -1,4 +1,4 @@
-/* ==========================================================================
+ /* ==========================================================================
    Danket Plus Header Styling (SCSS)
    Pixel-perfect, PageSpeed-optimized, and fully responsive
    ========================================================================== */
@@ -5484,7 +5484,7 @@ body {
     .hero__card {
         align-items: flex-end;
         background:
-            url('../images/main-page_main-bg.png');
+            url('../images/main-page_main-bg.webp');
 
         @media (max-width: 1024px) {
             height: 347.455px;
@@ -5493,7 +5493,7 @@ body {
         @media (max-width: 480px) {
             height: 410px;
             background-image:
-                url('../images/main-page_main-bg_mobile.png');
+                url('../images/main-page_main-bg_mobile.webp');
         }
     }
 
