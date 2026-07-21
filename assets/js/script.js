@@ -157,14 +157,17 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     if (typeof Swiper === 'undefined') return;
 
-    if (document.querySelector('.orders__slider')) {
-        new Swiper('.orders__slider', {
+    const ordersSlider = document.querySelector('.orders__slider');
+    if (ordersSlider) {
+        // The home-page variant keeps a 12px gutter at every width; the polyurea
+        // page widens it to 20px on desktop.
+        const isClientsVariant = ordersSlider.closest('.orders--clients') !== null;
+
+        new Swiper(ordersSlider, {
             slidesPerView: 'auto',
             spaceBetween: 12,
             grabCursor: true,
-            breakpoints: {
-                769: { spaceBetween: 20 }
-            }
+            breakpoints: isClientsVariant ? {} : { 769: { spaceBetween: 20 } }
         });
     }
 

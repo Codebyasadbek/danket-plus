@@ -1413,11 +1413,11 @@ body {
   gap: 10px;
   margin: 0 0 20px 0;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.78px;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: var(--txt-primary, #2D323B);
 }
 .steps-eyebrow::before {
@@ -3163,6 +3163,34 @@ body {
 }
 .apply-section--spf {
   background-color: #F4F6F8;
+  border-radius: 30px;
+}
+@media screen and (max-width: 480px) {
+  .apply-section--spf {
+    padding: 60px 0;
+  }
+  .apply-section--spf .apply-card__text {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .apply-section--spf .apply-card__title {
+    color: var(--txt-primary, #2D323B);
+    font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+  .apply-section--spf .apply-card__title br {
+    display: none;
+  }
+  .apply-section--spf .apply-grid {
+    gap: 12px;
+  }
 }
 .apply-section--spf .apply-section__title {
   color: var(--txt-primary, #2D323B);
@@ -3347,7 +3375,7 @@ body {
 }
 @media (max-width: 480px) {
   .apply-card--spf .apply-card__media {
-    height: 169px;
+    height: 190px;
   }
 }
 @media (min-width: 951px) {
@@ -4224,6 +4252,35 @@ body {
     display: inline;
   }
 }
+.orders--clients {
+  margin-bottom: 0;
+}
+.orders--clients .orders__eyebrow {
+  display: inline-flex;
+}
+.orders--clients .orders__slide {
+  width: 260px;
+}
+@media (max-width: 1024px) {
+  .orders--clients .orders__slide {
+    width: 260px;
+  }
+}
+@media (max-width: 768px) {
+  .orders--clients .orders__slide {
+    width: 260px;
+  }
+}
+.orders--clients .orders-card__img {
+  height: 345px;
+}
+@media (max-width: 768px) {
+  .orders--clients .orders-card__img {
+    height: 345px;
+    border-radius: 16px;
+  }
+}
+
 .local-projects {
   margin-bottom: 100px;
 }
@@ -5459,15 +5516,12 @@ body {
 }
 .promo-card__eyebrow {
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: rgba(255, 255, 255, 0.8);
-}
-@media (max-width: 480px) {
-  .promo-card__eyebrow {
-    font-size: 13px;
-  }
 }
 .promo-card__title {
   max-width: 270px;
@@ -5831,11 +5885,11 @@ body {
   gap: 10px;
   margin: 0 0 20px 0;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.78px;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: var(--txt-primary, #2D323B);
 }
 .roof-problems__eyebrow::before {
@@ -6056,12 +6110,12 @@ body {
   gap: 8px;
   margin-bottom: 12px;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.55px;
-  text-transform: uppercase;
-  color: var(--txt-secondary, #525A6B);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
+  color: var(--txt-primary, #2D323B);
 }
 .details-matter__eyebrow::before {
   content: "";
@@ -6211,11 +6265,11 @@ body {
   gap: 10px;
   margin: 0 0 20px 0;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.78px;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: var(--txt-primary, #2D323B);
 }
 .core-services__eyebrow::before {
@@ -6404,10 +6458,10 @@ body {
   margin: 0 0 12px 0;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 12px;
-  font-weight: 500;
-  line-height: 130%;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: var(--txt-primary, #2D323B);
 }
 .applications__eyebrow::before {
@@ -6420,7 +6474,6 @@ body {
 }
 @media (max-width: 480px) {
   .applications__eyebrow {
-    font-size: 11px;
     margin-bottom: 8px;
   }
 }
@@ -6532,11 +6585,11 @@ body {
   gap: 10px;
   margin: 0 0 20px 0;
   font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: 0.78px;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.24px;
   color: #FFF;
 }
 .advantages__eyebrow::before {
@@ -6704,16 +6757,18 @@ body {
 }
 .adv-card__title {
   margin: 0 0 16px 0;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 120%;
-  text-transform: uppercase;
   color: var(--txt-primary, #2D323B);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
 }
 @media (max-width: 480px) {
   .adv-card__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 .adv-card__text {

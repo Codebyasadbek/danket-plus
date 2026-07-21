@@ -1451,11 +1451,11 @@ body {
     gap: 10px;
     margin: 0 0 20px 0;
     font-family: $font-primary;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 130%;
-    letter-spacing: 0.78px;
-    text-transform: uppercase;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.24px;
     color: var(--txt-primary, #2D323B);
 
     &::before {
@@ -3228,6 +3228,37 @@ body {
     // SPF page variant: light panel with dark type instead of the blue panel
     &--spf {
         background-color: #F4F6F8;
+        border-radius: 30px;
+
+        @media screen and (max-width: 480px) {
+            padding: 60px 0;
+
+            .apply-card__text {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+
+            .apply-card__title {
+                color: var(--txt-primary, #2D323B);
+                font-family: $font-secondary;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 110%;
+                letter-spacing: -0.18px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+                padding-bottom: 8px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            .apply-grid {
+                gap: 12px;
+            }
+        }
 
         .apply-section__title {
             color: var(--txt-primary, #2D323B);
@@ -3426,7 +3457,7 @@ body {
             }
 
             @media (max-width: 480px) {
-                height: 169px;
+                height: 190px;
             }
         }
 
@@ -4341,6 +4372,41 @@ body {
 
     .orders-card__label--mobile {
         display: inline;
+    }
+}
+
+// Home-page variant. The polyurea page swaps its eyebrow, title and card labels
+// between long and short forms at 768/1024; this one shows a single form and a
+// single card size at every width, so the row is identical from 320px up and
+// only the number of visible cards changes.
+.orders--clients {
+    margin-bottom: 0;
+
+    .orders__eyebrow {
+        display: inline-flex;
+    }
+
+    // 260 + 12 gap holds ~4.5 cards in the 1200px container, matching the design
+    .orders__slide {
+        width: 260px;
+
+        @media (max-width: 1024px) {
+            width: 260px;
+        }
+
+        @media (max-width: 768px) {
+            width: 260px;
+        }
+    }
+
+    .orders-card__img {
+        height: 345px;
+
+        // the shared rule swaps to a taller 382px card and a 12px radius here
+        @media (max-width: 768px) {
+            height: 345px;
+            border-radius: 16px;
+        }
     }
 }
 
@@ -5630,14 +5696,12 @@ body {
 
     &__eyebrow {
         font-family: $font-primary;
-        font-size: 14px;
+        font-size: 12px;
+        font-style: normal;
         font-weight: 400;
-        line-height: 130%;
+        line-height: 110%;
+        letter-spacing: 0.24px;
         color: rgba(255, 255, 255, 0.8);
-
-        @media (max-width: 480px) {
-            font-size: 13px;
-        }
     }
 
     &__title {
@@ -6016,11 +6080,11 @@ body {
         gap: 10px;
         margin: 0 0 20px 0;
         font-family: $font-primary;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 130%;
-        letter-spacing: 0.78px;
-        text-transform: uppercase;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.24px;
         color: var(--txt-primary, #2D323B);
 
         &::before {
@@ -6248,12 +6312,12 @@ body {
         gap: 8px;
         margin-bottom: 12px;
         font-family: $font-primary;
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 130%;
-        letter-spacing: 0.55px;
-        text-transform: uppercase;
-        color: var(--txt-secondary, #525A6B);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.24px;
+        color: var(--txt-primary, #2D323B);
 
         &::before {
             content: "";
@@ -6417,11 +6481,11 @@ body {
         gap: 10px;
         margin: 0 0 20px 0;
         font-family: $font-primary;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 130%;
-        letter-spacing: 0.78px;
-        text-transform: uppercase;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.24px;
         color: var(--txt-primary, #2D323B);
 
         &::before {
@@ -6635,10 +6699,10 @@ body {
         margin: 0 0 12px 0;
         font-family: $font-primary;
         font-size: 12px;
-        font-weight: 500;
-        line-height: 130%;
-        letter-spacing: 0.6px;
-        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.24px;
         color: var(--txt-primary, #2D323B);
 
         &::before {
@@ -6651,7 +6715,6 @@ body {
         }
 
         @media (max-width: 480px) {
-            font-size: 11px;
             margin-bottom: 8px;
         }
     }
@@ -6771,11 +6834,11 @@ body {
         gap: 10px;
         margin: 0 0 20px 0;
         font-family: $font-primary;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 130%;
-        letter-spacing: 0.78px;
-        text-transform: uppercase;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: 0.24px;
         color: #FFF;
 
         &::before {
@@ -6950,15 +7013,17 @@ body {
 
     &__title {
         margin: 0 0 16px 0;
-        font-family: $font-secondary;
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 120%;
-        text-transform: uppercase;
         color: var(--txt-primary, #2D323B);
+        font-family: $font-secondary;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.24px;
+        text-transform: uppercase;
 
         @media (max-width: 480px) {
-            font-size: 20px;
+            font-size: 22px;
         }
     }
 
