@@ -127,3 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- FAQ Accordion (single item open at a time) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const faqHeads = document.querySelectorAll('.faq-item__head');
+    if (!faqHeads.length) return;
+
+    faqHeads.forEach(head => {
+        head.addEventListener('click', () => {
+            const item = head.closest('.faq-item');
+            const isOpen = item.classList.contains('is-open');
+
+            item.closest('.faq__list').querySelectorAll('.faq-item.is-open').forEach(openItem => {
+                openItem.classList.remove('is-open');
+                openItem.querySelector('.faq-item__head').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                item.classList.add('is-open');
+                head.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});

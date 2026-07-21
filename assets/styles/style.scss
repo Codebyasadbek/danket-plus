@@ -1852,7 +1852,7 @@ body {
         line-height: 110%;
         letter-spacing: -0.36px;
         text-transform: uppercase;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
 
         &--desktop {
             display: block;
@@ -2784,14 +2784,20 @@ body {
     gap: 20px;
     align-items: stretch;
 
+    // 1024 — same three-column composition as desktop, tighter rhythm
     @media (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
+    // tablet — cards keep two columns, blue card drops full-width below
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+
+    // mobile — single column, blue card last
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
     }
 
     &__left {
@@ -2801,13 +2807,15 @@ body {
         gap: 16px;
 
         @media (max-width: 1024px) {
-            grid-column: span 2;
+            gap: 12px;
         }
 
         @media (max-width: 768px) {
-            grid-column: span 1;
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 480px) {
             grid-template-columns: 1fr;
-            gap: 12px;
         }
     }
 
@@ -2815,15 +2823,9 @@ body {
         display: flex;
         height: 100%;
 
-        @media (max-width: 1024px) {
-            grid-column: span 2;
-            height: auto;
-            min-height: 120px;
-        }
-
         @media (max-width: 768px) {
-            grid-column: span 1;
-            min-height: 100px;
+            grid-column: 1 / -1;
+            height: auto;
         }
     }
 }
@@ -2846,16 +2848,12 @@ body {
     &__text {
         color: var(--txt-primary, #2D323B);
         font-family: $font-primary;
-        font-size: 18px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
 
         margin: 0;
-
-        @media (max-width: 480px) {
-            font-size: 14px;
-        }
     }
 
     &__check {
@@ -2877,7 +2875,7 @@ body {
     box-sizing: border-box;
 
     @media (max-width: 1024px) {
-        padding: 24px;
+        padding: 20px;
     }
 
     @media (max-width: 768px) {
@@ -2896,11 +2894,1745 @@ body {
         text-transform: uppercase;
         margin: 0;
 
+        @media (max-width: 1024px) {
+            font-size: 20px;
+            letter-spacing: -0.2px;
+        }
+    }
+}
+
+// --- Why Polyurea For Dubai Section ---
+.why-dubai {
+    padding-top: 0;
+    padding-bottom: 100px;
+    background-color: #FFFFFF;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 60px;
+    }
+
+    &__grid {
+        display: flex;
+        gap: 32px;
+        align-items: stretch;
+
+        // keep both columns shrinkable so long words can't blow out the row
+        >* {
+            min-width: 0;
+        }
+
+        @media (max-width: 1024px) {
+            gap: 24px;
+        }
+
+        // stack: the image needs real width, so side-by-side stops working here
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    &__media {
+        width: 100%;
+        display: flex;
+
+        // image drops below the copy, per the mobile design
+        @media (max-width: 768px) {
+            order: 2;
+        }
+    }
+
+    &__image-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        min-height: 480px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+        @media (max-width: 1024px) {
+            min-height: 420px;
+        }
+
+        @media (max-width: 768px) {
+            min-height: 380px;
+        }
+
+        @media (max-width: 480px) {
+            min-height: 320px;
+            border-radius: 12px;
+        }
+    }
+
+    &__image {
+        // absolute fill: the wrapper's height comes from min-height, and a
+        // percentage height can't resolve against that — the image would fall
+        // back to its intrinsic ratio and leave a gap the badge sat in
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__badge {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        border-radius: 16px;
+        background: var(--bg-primary, #FFF);
+        padding: 20px 24px;
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+            border-radius: 16px;
+        }
+    }
+
+    &__badge-text {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        /* 20.8px */
+        margin: 0;
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 1025px) {
+            max-width: 425px;
+        }
+
+        @media (max-width: 768px) {
+            order: 1;
+        }
+    }
+
+    &__title {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        /* 23.4px */
+
+        margin: 0 0 20px 0;
+
+        @media (max-width: 1025px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #DBDEE4;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #DBDEE4;
+
+        // &:last-child {
+        //     border-bottom: none;
+        //     padding-bottom: 0;
+        // }
+
+        @media (max-width: 768px) {
+            padding: 16px 0;
+            gap: 12px;
+        }
+    }
+
+    &__icon-wrapper {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+
+        svg {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-title {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        margin: 0;
+    }
+
+    &__item-text {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 6px 0 0 0;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
+    }
+}
+
+// --- Where We Apply Polyurea Section ---
+.apply-section {
+    background-color: #739EC9;
+    padding: 100px 0;
+
+    @media (max-width: 1025px) {
+        padding: 80px 0;
+    }
+
+    &__title {
+        color: #FFFFFF;
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+        }
+    }
+}
+
+.apply-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    @media (max-width: 950px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+.apply-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+
+    &--full {
+        grid-column: span 2;
+        flex-direction: row;
+
+        @media (max-width: 950px) {
+            grid-column: span 1;
+            flex-direction: column;
+        }
+
+        .apply-card__info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        .apply-card__media {
+            flex: 1;
+            height: 100%;
+            min-height: 320px;
+            max-height: 400px;
+            border-radius: 16px;
+
+            @media (max-width: 950px) {
+                height: 240px;
+                min-height: 200px;
+                max-height: 280px;
+                border-radius: 16px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: 24px;
+        font-weight: 600;
+        color: #2D323B;
+        text-transform: uppercase;
+        margin: 0 0 16px 0;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #DBDEE4;
+        letter-spacing: -0.24px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+            letter-spacing: -0.2px;
+        }
+    }
+
+    &__text {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0;
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    &__media {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        display: flex;
+        overflow: hidden;
+        border-radius: 16px;
+        margin-top: auto;
+
+        @media (max-width: 950px) {
+            height: 220px;
+        }
+
+        @media (max-width: 480px) {
+            height: 169px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.apply-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #739EC9;
+    color: var(--neutral-white, #FFF);
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    text-decoration: none;
+    border-radius: 99px;
+    padding: 15px 32px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+
+    &--inline {
+        margin-top: 28px;
+        align-self: flex-start;
+    }
+
+    &--desktop {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    &--mobile {
+        display: none;
+        margin-top: 16px;
+        width: 100%;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            display: inline-flex;
+        }
+    }
+}
+
+// --- Where Leaks Most Often Start Section ---
+.leaks-section {
+    background-color: #F4F6F8;
+    padding: 100px 0;
+
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 60px 0;
+    }
+}
+
+.leaks-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.leaks-left {
+    display: flex;
+    flex-direction: column;
+    // 437px left / 573px right, space-between opens the remaining ~190px gap
+    flex: 0 1 437px;
+    min-width: 0;
+
+    @media (max-width: 1024px) {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+.leaks-title {
+    max-width: 384px;
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-secondary;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+    margin: 0 0 32px 0;
+
+    @media (max-width: 1024px) {
+        letter-spacing: -0.28px;
+        margin-bottom: 24px;
+        max-width: unset;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+    }
+}
+
+.leaks-right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    // fixed basis so the item underlines stop at the column edge, not the page
+    flex: 0 1 573px;
+    min-width: 0;
+
+    @media (max-width: 1024px) {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+.leaks-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+
+    // two columns are kept through the tablet range, per the design
+    @media (max-width: 1024px) {
+        column-gap: 32px;
+        row-gap: 24px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+.leaks-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--full,
+    &:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+
+        .leaks-item__title {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        &--full,
+        &:last-child:nth-child(odd) {
+            grid-column: span 1;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #DBDEE4;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+    }
+
+    &__num {
+        color: var(--txt-tertiary, #929BAC);
+        font-family: $font-primary;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    &__title {
+        max-width: 271px;
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        margin: 0;
+
+        @media (max-width: 1024px) {
+            font-size: 18px;
+            max-width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.leaks-blue-card {
+    max-width: 437px;
+    background-color: #739EC9;
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    // below desktop the card sits under the items and spans the full width
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    &--desktop {
+        // 32px title margin + 64px = the 96px title-to-card gap in the design
+        margin-top: 64px;
+
+        @media (max-width: 1024px) {
+            display: none !important;
+        }
+    }
+
+    &--mobile {
+        display: none;
+
+        @media (max-width: 1024px) {
+            display: flex !important;
+            margin-top: 8px;
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        color: var(--txt-inverted, #FFF);
+        font-family: $font-secondary;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        /* 26.4px */
+        letter-spacing: -0.24px;
+        text-transform: uppercase;
+        // the design sets the heading well clear of the caption
+        margin: 0 0 40px 0;
+
+        // wide card, few line breaks — the type steps down here
+        @media (max-width: 1024px) {
+            margin-bottom: 12px;
+        }
+
+        // narrow card again, so the type steps back up
+        @media (max-width: 480px) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__text {
+        color: var(--txt-inverted, #FFF);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0;
+    }
+}
+
+// --- Technical Specifications Section ---
+.tech-specs {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+
+    &__title {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0 0 16px 0;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__card {
+        background-color: #F3F4F6;
+        border-radius: 16px;
+        padding: 32px;
+        box-sizing: border-box;
+
+        @media (max-width: 480px) {
+            border-radius: 16px;
+            background: var(--bg-secondary, #F3F4F6);
+            padding: 8px;
+        }
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 24px;
+        align-items: stretch;
+
+        @media (max-width: 950px) {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: space-between;
+
+        @media (max-width: 950px) {
+            gap: 8px;
+        }
+    }
+
+    &__right {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            padding: 24px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 0;
+        border-bottom: 1px solid #DBDEE4;
+        font-family: $font-primary;
+        font-size: 15px;
+        line-height: 140%;
+        color: var(--txt-secondary, #525A6B);
+
         @media (max-width: 768px) {
             font-size: 16px;
+            font-weight: 400;
+            line-height: 130%;
+            padding: 8px 0;
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        strong {
+            color: var(--txt-primary, #2D323B);
+            font-weight: 600;
+        }
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+    }
+}
+
+.tech-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    flex: 1;
+
+    @media (max-width: 480px) {
+        padding: 24px;
+    }
+
+    &__icon-wrapper {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #F3F4F6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+
+
+        svg {
+            width: 24px;
+            height: 24px;
+
+        }
+    }
+
+    &__text {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        margin: 0;
+
+        strong {
+            font-weight: 600;
         }
     }
 }
 
 
 
+.process-section {
+    padding-bottom: 100px;
+    background-color: #FFFFFF;
+
+    .desktop {
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .laptop {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &--execution {
+        padding-top: 0;
+
+        @media (max-width: 1024px) {
+            padding-top: 40px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 60px;
+    }
+}
+
+.process-title {
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-secondary;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+    margin: 0 0 16px 0;
+
+    @media (max-width: 1024px) {
+        font-size: 28px;
+        letter-spacing: -0.28px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+        letter-spacing: -0.24px;
+        margin-bottom: 12px;
+    }
+}
+
+.process-subtitle {
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    margin: 0 0 40px 0;
+    max-width: 800px;
+
+    @media (max-width: 1024px) {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+}
+
+.timeline-container {
+    // geometry tokens — the connector line is derived from these,
+    // so the line always terminates dead-centre on the first/last circle.
+    --tl-circle: 50px;
+    --tl-gap: 32px;
+    --tl-thickness: 3px;
+    --tl-color: #739EC9;
+
+    position: relative;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+        --tl-gap: 24px;
+    }
+
+    @media (max-width: 480px) {
+        --tl-circle: 40px;
+    }
+}
+
+.timeline-line {
+    position: absolute;
+    z-index: 1;
+    top: calc(var(--tl-circle) / 2);
+    left: calc(var(--tl-circle) / 2);
+    // distance from the right edge back to the last circle's centre
+    right: calc((100% - 3 * var(--tl-gap)) / 4 - var(--tl-circle) / 2);
+    height: var(--tl-thickness);
+    transform: translateY(-50%);
+    background-color: var(--tl-color);
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.timeline-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--tl-gap);
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        padding-bottom: 24px;
+
+        // vertical connector: runs from this circle's bottom edge
+        // down to the next circle's top edge
+        &::before {
+            content: "";
+            position: absolute;
+            top: var(--tl-circle);
+            bottom: 0;
+            left: calc(var(--tl-circle) / 2);
+            width: var(--tl-thickness);
+            transform: translateX(-50%);
+            background-color: var(--tl-color);
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.timeline-circle {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--Dubai-blue, #739EC9);
+    display: flex;
+    width: var(--tl-circle);
+    height: var(--tl-circle);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+
+    color: #FFFFFF;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+        // optically centre the title against the circle
+        padding-top: calc((var(--tl-circle) - 24px) / 2);
+    }
+}
+
+.timeline-step-title {
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-primary;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin: 0 0 10px 0;
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+.timeline-step-text {
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--txt-secondary, #2D323B);
+    margin: 0;
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+    }
+}
+
+// --- Who Typically Orders Section ---
+.orders {
+    background: #F0F2F5;
+    padding: 100px 0;
+    margin-bottom: 100px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 0;
+        margin-bottom: 60px;
+    }
+}
+
+.orders__eyebrow {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: var(--txt-primary, #2D323B);
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+        display: inline-flex;
+    }
+}
+
+.orders__eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+}
+
+.orders__title {
+    margin-bottom: 24px;
+}
+
+.orders__title-text--mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .orders__title-text--desktop {
+        display: none;
+    }
+
+    .orders__title-text--mobile {
+        display: inline;
+    }
+}
+
+// Slider bleeds off the right edge of the viewport, as per the mockups
+.orders__slider {
+    margin-right: calc((100% - 100vw) / 2);
+    overflow: hidden;
+}
+
+.orders__slide {
+    width: 270px;
+    height: auto;
+
+    @media (max-width: 1024px) {
+        width: 250px;
+    }
+
+    @media (max-width: 768px) {
+        width: 250px;
+    }
+}
+
+.orders-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.orders-card__img {
+    display: block;
+    width: 100%;
+    height: 358px;
+    object-fit: cover;
+    border-radius: 16px;
+
+    @media (max-width: 1024px) {
+        height: 356px;
+    }
+}
+
+.orders-card__caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 16px;
+
+    @media (max-width: 768px) {
+        margin-top: 12px;
+    }
+}
+
+.orders-card__dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.orders-card__label {
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.orders-card__label--mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .orders-card__label--desktop {
+        display: none;
+    }
+
+    .orders-card__label--mobile {
+        display: inline;
+    }
+}
+
+// --- Case Studies / Local Projects Section ---
+.local-projects {
+    margin-bottom: 100px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 60px;
+    }
+}
+
+.local-projects__wrap {
+    position: relative;
+}
+
+.local-projects__slider {
+    overflow: hidden;
+    border-radius: 20px;
+
+    @media (max-width: 768px) {
+        border-radius: 16px;
+    }
+}
+
+.lp-card {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px;
+    background: #F4F6F8;
+    border-radius: 20px;
+    min-height: 393px;
+
+    @media (max-width: 1024px) {
+        min-height: 0;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 8px;
+        gap: 8px;
+    }
+}
+
+.lp-card__info {
+    flex: 1 1 50%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+
+    @media (max-width: 768px) {
+        flex: 0 0 auto;
+        border-radius: 12px;
+        padding: 20px 16px;
+    }
+}
+
+.lp-card__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-primary;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.lp-card__dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+}
+
+.lp-card__title {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    color: var(--txt-primary, #2D323B);
+    margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+    }
+}
+
+.lp-card__divider {
+    height: 1px;
+    background: #E5E7EB;
+    margin: 16px 0;
+
+    @media (max-width: 768px) {
+        margin: 12px 0;
+    }
+}
+
+.lp-card__metrics {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+        gap: 16px;
+    }
+}
+
+.lp-card__metric {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    // Vertical rule between Scope and Timeline
+    &+.lp-card__metric {
+        padding-left: 24px;
+        border-left: 1px solid #E5E7EB;
+
+        @media (max-width: 768px) {
+            padding-left: 16px;
+        }
+    }
+}
+
+.lp-card__metric-label {
+    color: var(--txt-primary, #2D323B);
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.lp-card__metric-value {
+    color: var(--Brand-primary, #F26522);
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.24px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.lp-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lp-card__row {
+    color: var(--txt-primary, #2D323B);
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.lp-card__media {
+    flex: 1 1 50%;
+    min-width: 0;
+
+    @media (max-width: 768px) {
+        flex: 0 0 auto;
+    }
+}
+
+.lp-card__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    height: 373px;
+    object-fit: cover;
+    border-radius: 16px;
+
+    @media (max-width: 1024px) {
+        min-height: 0;
+    }
+
+    @media (max-width: 768px) {
+        height: 208px;
+        border-radius: 12px;
+    }
+}
+
+// --- Slider controls ---
+.local-projects__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
+}
+
+.lp-nav {
+    // Centred against the card only, not the card + controls row
+    position: absolute;
+    top: 0;
+    bottom: 27px; // controls row: 24px margin-top + 3px pagination bar
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    border-radius: 93px;
+    border: 1px solid var(--border-default, #DBDEE4);
+    background: var(--bg-secondary, #F3F4F6);
+    color: var(--txt-primary, #2D323B);
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+        background: #E5E7EB;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    // Arrows sit outside the card while the viewport is wide enough
+    &--prev {
+        left: -56px;
+    }
+
+    &--next {
+        right: -56px;
+    }
+
+    @media (max-width: 1400px) {
+        &--prev {
+            left: -12px;
+        }
+
+        &--next {
+            right: -12px;
+        }
+    }
+
+    // On mobile the arrows drop into the bottom row alongside the dots
+    @media (max-width: 768px) {
+        position: static;
+        margin: 0;
+
+        &--prev,
+        &--next {
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
+.lp-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+
+    .swiper-pagination-bullet {
+        width: 24px;
+        height: 3px;
+        margin: 0;
+        border-radius: 2px;
+        background: #D3D7DE;
+        opacity: 1;
+        transition: background-color 0.2s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--txt-primary, #2D323B);
+    }
+}
+
+// --- FAQ Accordion Section ---
+.faq {
+    margin-bottom: 100px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 60px;
+    }
+}
+
+.faq__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.faq__title {
+    margin-bottom: 0;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
+}
+
+.faq__list {
+    // No flex gap here on purpose: the rule between items is a border-top on
+    // the item itself, so the head's symmetric padding is what centres it.
+    // Adding a gap would push each rule up against the row below it.
+
+    // Below the two-column breakpoint the list gains a rule under the title
+    @media (max-width: 1024px) {
+        border-top: 1px solid #E5E7EB;
+    }
+}
+
+.faq-item {
+    &+.faq-item {
+        border-top: 1px solid #E5E7EB;
+    }
+
+    // Only the very first row sits flush with the top of the column
+    &:first-child .faq-item__head {
+        padding-top: 0;
+
+        @media (max-width: 1024px) {
+            padding-top: 18px;
+        }
+
+        @media (max-width: 768px) {
+            padding-top: 16px;
+        }
+    }
+}
+
+.faq-item__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0;
+    }
+}
+
+.faq-item__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #F0F2F5;
+    transition: background-color 0.25s ease;
+
+    @media (max-width: 1024px) {
+        width: 36px;
+        height: 36px;
+    }
+
+    @media (max-width: 768px) {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+// Both icons are stacked so they can cross-fade instead of snapping
+.faq-item__icon-plus,
+.faq-item__icon-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    @media (max-width: 768px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.faq-item__icon-plus {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-item__icon-close {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+// Hover previews the open state; is-open holds it
+.faq-item.is-open .faq-item__icon,
+.faq-item__head:hover .faq-item__icon,
+.faq-item__head:focus-visible .faq-item__icon {
+    background: #739EC9;
+}
+
+.faq-item.is-open .faq-item__icon-plus,
+.faq-item__head:hover .faq-item__icon-plus,
+.faq-item__head:focus-visible .faq-item__icon-plus {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.is-open .faq-item__icon-close,
+.faq-item__head:hover .faq-item__icon-close,
+.faq-item__head:focus-visible .faq-item__icon-close {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-item__question {
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--txt-primary, #2D323B);
+
+    @media (max-width: 768px) {
+        font-size: 17px;
+    }
+}
+
+// Height animation without a hard-coded max-height
+.faq-item__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.faq-item.is-open .faq-item__answer {
+    grid-template-rows: 1fr;
+}
+
+.faq-item__answer-inner {
+    overflow: hidden;
+}
+
+.faq-item__answer p {
+    color: var(--txt-primary, #2D323B);
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin: 0;
+    padding-bottom: 18px;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+        padding-bottom: 16px;
+    }
+}
+
+// --- Swiper fallback layout ---
+// Swiper's own stylesheet is loaded asynchronously (it sits below the fold),
+// so these few rules ship in the render-blocking CSS to keep the slides laid
+// out correctly during the gap. Without them the slides stack vertically for
+// a frame and cause a large layout shift.
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.local-projects__slider .swiper-slide {
+    width: 100%;
+}
