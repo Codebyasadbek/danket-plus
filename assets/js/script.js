@@ -150,3 +150,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- Swiper sliders ---
+// Runs on every page but initialises only the sliders that are actually in the
+// markup, so pages without the Swiper bundle (or without a slider) are a no-op.
+window.addEventListener('load', () => {
+    if (typeof Swiper === 'undefined') return;
+
+    if (document.querySelector('.orders__slider')) {
+        new Swiper('.orders__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            grabCursor: true,
+            breakpoints: {
+                769: { spaceBetween: 20 }
+            }
+        });
+    }
+
+    if (document.querySelector('.local-projects__slider')) {
+        new Swiper('.local-projects__slider', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            grabCursor: true,
+            autoHeight: true,
+            navigation: {
+                prevEl: '.lp-nav--prev',
+                nextEl: '.lp-nav--next'
+            },
+            pagination: {
+                el: '.lp-pagination',
+                clickable: true
+            }
+        });
+    }
+});

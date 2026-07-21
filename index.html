@@ -5,80 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Danket Plus - Modern solutions and professional project design. Group of companies.">
-    <title>Danket Plus</title>
+        content="Spray-applied polyurea waterproofing and polyurethane foam insulation for commercial, industrial and residential projects across Dubai and the UAE.">
+    <title>Polyurea Waterproofing &amp; SPF Insulation in Dubai — Danket Plus</title>
     <!-- Responsive Preload for LCP Hero Background Images -->
-    <link rel="preload" href="assets/images/hero_bg-mobile.webp" as="image" type="image/webp"
+    <link rel="preload" href="assets/images/main-page_main-bg_mobile.png" as="image" type="image/png"
         media="(max-width: 480px)">
-    <link rel="preload" href="assets/images/hero_bg.webp" as="image" type="image/webp" media="(min-width: 481px)">
+    <link rel="preload" href="assets/images/main-page_main-bg.png" as="image" type="image/png"
+        media="(min-width: 481px)">
     <!-- Self-hosted fonts: preloaded so the first paint already has them.
          Only the two faces used above the fold are preloaded. -->
     <link rel="preload" href="assets/fonts/golos-text.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/titillium-web-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/styles/fonts.css">
+    <!-- Swiper: the slider is below the fold, so its CSS must not block first paint -->
+    <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" media="print"
+        onload="this.onload=null;this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css">
+    </noscript>
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<style>
-    .hero__card {
-        background: url('assets/images/hero_bg.webp');
-    }
-
-    @media screen and (max-width: 480px) {
-        .hero__card {
-            background: url('assets/images/hero_bg-mobile.webp');
-        }
-    }
-</style>
 
 <body>
     <div class="wrapper">
         <!-- Sticky Header -->
         <header class="header">
             <div class="container header__container">
-                <a href="#" class="logo" aria-label="Danket Plus Home">
+                <a href="index.html" class="logo" aria-label="Danket Plus Home">
                     <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
-                    <span class="logo__subtext">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="7" viewBox="0 0 117 7" fill="none">
-                            <path d="M0 6.90212V1.5338H3.38183V2.16266H0.722481V6.90212H0Z" fill="black" />
-                            <path
-                                d="M6.83721 6.90212V1.5338H8.68184C9.15837 1.5338 9.54779 1.60538 9.8501 1.74854C10.1575 1.88658 10.3856 2.08086 10.5342 2.33138C10.6828 2.57679 10.757 2.86055 10.757 3.18264C10.757 3.49963 10.6828 3.78338 10.5342 4.03391C10.3856 4.28443 10.1575 4.48127 9.8501 4.62442C9.54779 4.76246 9.15837 4.83148 8.68184 4.83148H7.55969V6.90212H6.83721ZM7.55969 4.20262H8.64341C9.15581 4.20262 9.51448 4.1106 9.71944 3.92654C9.92953 3.74248 10.0346 3.49452 10.0346 3.18264C10.0346 2.87077 9.92953 2.62281 9.71944 2.43875C9.51448 2.25469 9.15581 2.16266 8.64341 2.16266H7.55969V4.20262Z"
-                                fill="black" />
-                            <path
-                                d="M15.142 6.97881C15.0856 6.97881 15.0292 6.97625 14.9729 6.97114C14.9216 6.97114 14.8755 6.96859 14.8345 6.96347V6.31928C14.8755 6.32439 14.9216 6.3295 14.9729 6.33461C15.0292 6.33461 15.0856 6.33461 15.142 6.33461C15.2905 6.33461 15.4084 6.31672 15.4955 6.28093C15.5877 6.24514 15.6672 6.18123 15.7338 6.0892C15.8004 5.99718 15.8696 5.86425 15.9413 5.69042L13.72 1.5338H14.504L16.3025 4.94652L17.8244 1.5338H18.5622L16.6023 5.85146C16.5152 6.04575 16.4255 6.21447 16.3333 6.35762C16.241 6.50078 16.1386 6.61837 16.0258 6.7104C15.9131 6.80242 15.785 6.86889 15.6415 6.90979C15.4981 6.9558 15.3315 6.97881 15.142 6.97881Z"
-                                fill="black" />
-                            <path d="M22.0203 6.90212V1.5338H26.2476V6.90212H25.5251V2.16266H22.7428V6.90212H22.0203Z"
-                                fill="black" />
-                            <path d="M30.3211 6.90212V1.5338H34.5484V6.90212H33.8259V2.16266H31.0436V6.90212H30.3211Z"
-                                fill="black" />
-                            <path
-                                d="M38.0071 6.90212L40.0669 1.5338H40.7894L42.8493 6.90212H42.0653L41.5503 5.56771H39.2753L38.7603 6.90212H38.0071ZM39.5135 4.93885H41.3121L40.4128 2.45409L39.5135 4.93885Z"
-                                fill="black" />
-                            <path
-                                d="M53.8396 6.90212V1.5338H54.5621V3.84218H55.1769L57.2829 1.5338H58.1437L55.7918 4.09526L58.2206 6.90212H57.2983L55.1769 4.44036H54.5621V6.90212H53.8396Z"
-                                fill="black" />
-                            <path
-                                d="M63.6827 6.97881C63.3753 6.97881 63.0781 6.92768 62.7912 6.82543C62.5093 6.71806 62.2557 6.55446 62.0302 6.33461C61.8048 6.11477 61.6255 5.83357 61.4922 5.49102C61.3641 5.14847 61.3001 4.7369 61.3001 4.25631V4.10293C61.3001 3.64279 61.3641 3.24655 61.4922 2.91423C61.6255 2.5819 61.8048 2.30838 62.0302 2.09364C62.2557 1.8738 62.5093 1.71275 62.7912 1.61049C63.0781 1.50824 63.3753 1.45711 63.6827 1.45711C63.9902 1.45711 64.2848 1.50824 64.5666 1.61049C64.8536 1.71275 65.1098 1.8738 65.3352 2.09364C65.5607 2.30838 65.7374 2.5819 65.8655 2.91423C65.9988 3.24655 66.0654 3.64279 66.0654 4.10293V4.25631C66.0654 4.7369 65.9988 5.14847 65.8655 5.49102C65.7374 5.83357 65.5607 6.11477 65.3352 6.33461C65.1098 6.55446 64.8536 6.71806 64.5666 6.82543C64.2848 6.92768 63.9902 6.97881 63.6827 6.97881ZM63.6827 6.33461C63.9645 6.33461 64.2259 6.26559 64.4667 6.12755C64.7126 5.98951 64.9125 5.76711 65.0662 5.46034C65.2199 5.15358 65.2968 4.75224 65.2968 4.25631V4.10293C65.2968 3.63256 65.2199 3.25167 65.0662 2.96024C64.9125 2.66371 64.7126 2.44642 64.4667 2.30838C64.2259 2.17033 63.9645 2.10131 63.6827 2.10131C63.406 2.10131 63.1447 2.17033 62.8988 2.30838C62.6528 2.44642 62.453 2.66371 62.2993 2.96024C62.1455 3.25167 62.0687 3.63256 62.0687 4.10293V4.25631C62.0687 4.75224 62.1455 5.15358 62.2993 5.46034C62.453 5.76711 62.6528 5.98951 62.8988 6.12755C63.1447 6.26559 63.406 6.33461 63.6827 6.33461Z"
-                                fill="black" />
-                            <path
-                                d="M69.8333 6.90212V1.5338H70.5865L72.385 4.94652L74.1836 1.5338H74.906V6.90212H74.1836V2.83754L72.6387 5.75177H72.1007L70.5558 2.83754V6.90212H69.8333Z"
-                                fill="black" />
-                            <path d="M78.9823 6.90212V1.5338H83.2096V6.90212H82.4871V2.16266H79.7048V6.90212H78.9823Z"
-                                fill="black" />
-                            <path
-                                d="M86.6683 6.90212L88.7281 1.5338H89.4506L91.5104 6.90212H90.7265L90.2115 5.56771H87.9365L87.4215 6.90212H86.6683ZM88.1747 4.93885H89.9732L89.074 2.45409L88.1747 4.93885Z"
-                                fill="black" />
-                            <path
-                                d="M94.9685 6.90212V1.5338H95.691V3.82684H98.5502V1.5338H99.2727V6.90212H98.5502V4.4557H95.691V6.90212H94.9685Z"
-                                fill="black" />
-                            <path
-                                d="M103.344 6.90212V1.5338H104.067V5.75177L106.926 1.5338H107.649V6.90212H106.926V2.68416L104.067 6.90212H103.344Z"
-                                fill="black" />
-                            <path
-                                d="M111.72 6.90212V1.5338H112.443V5.75177L115.302 1.5338H116.024V6.90212H115.302V2.68416L112.443 6.90212H111.72ZM113.872 1.15035C113.585 1.15035 113.345 1.1069 113.15 1.01998C112.955 0.933064 112.809 0.805247 112.712 0.636529C112.614 0.462698 112.566 0.250522 112.566 0H113.242C113.242 0.235183 113.296 0.403902 113.404 0.506155C113.511 0.608409 113.667 0.659536 113.872 0.659536C114.082 0.659536 114.241 0.608409 114.349 0.506155C114.462 0.403902 114.518 0.235183 114.518 0H115.179C115.179 0.250522 115.13 0.462698 115.033 0.636529C114.936 0.805247 114.79 0.933064 114.595 1.01998C114.405 1.1069 114.164 1.15035 113.872 1.15035Z"
-                                fill="black" />
-                        </svg>
-                    </span>
+                    <span class="logo__subtext">ГРУППА КОМПАНИЙ</span>
                 </a>
 
                 <nav class="header__nav" aria-label="Main Navigation">
@@ -115,7 +71,7 @@
                 <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
                 <div class="mobile-menu__content">
                     <div class="mobile-menu__header">
-                        <a href="#" class="logo" aria-label="Danket Plus Home">
+                        <a href="index.html" class="logo" aria-label="Danket Plus Home">
                             <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
                             <span class="logo__subtext">ГРУППА КОМПАНИЙ</span>
                         </a>
@@ -141,35 +97,20 @@
                 </div>
             </div>
         </header>
-        <section class="hero">
+
+        <!-- Hero Section -->
+        <section class="hero hero--main">
             <div class="container">
                 <div class="hero_inner">
-                    <div class="hero__card" style="">
+                    <div class="hero__card">
                         <div class="hero__content">
-                            <!-- Breadcrumbs -->
-                            <div class="breadcrumbs">
-                                <a href="#" class="breadcrumbs__link">Home</a>
-                                <span class="breadcrumbs__separator"></span>
-                                <span class="breadcrumbs__current">Сontacts</span>
-                            </div>
-
                             <div class="block__inner">
                                 <div class="title-block">
-                                    <h1 class="hero__title hero__title--desktop">Get in Touch — Waterproofing &
-                                        Insulation
-                                        in Dubai</h1>
-                                    <h1 class="hero__title hero__title--mobile">Completed Projects — Waterproofing &
-                                        Insulation in Dubai</h1>
+                                    <h1 class="hero__title">Polyurea Waterproofing &amp; SPF Insulation in Dubai</h1>
 
-                                    <!-- Hero Description -->
-                                    <p class="hero__text hero__text--desktop">
-                                        Describe your project and we will review it and discuss the next steps. We work
-                                        across Dubai and the wider UAE — commercial, industrial and residential.
-                                    </p>
-                                    <p class="hero__text hero__text--tablet">
-                                        Spray polyurethane foam reduces overheating of structures and indoor spaces,
-                                        stabilising internal temperatures and lowering the load on air conditioning
-                                        systems.
+                                    <p class="hero__text">
+                                        Spray-applied polyurea waterproofing and polyurethane foam insulation for
+                                        commercial, industrial and residential projects across Dubai and the UAE.
                                     </p>
                                 </div>
                                 <!-- Hero CTA Actions -->
@@ -183,299 +124,858 @@
                 </div>
             </div>
         </section>
-        <!-- Contact Section -->
-        <section class="contact-section">
+
+        <!-- Hero Tiles: two service cards + combined-system promo -->
+        <section class="hero-tiles" id="services" aria-label="Our Services">
             <div class="container">
-                <div class="contact-grid">
-                    <!-- Left: Contact Info Cards -->
-                    <div class="contact-sidebar">
-                        <div class="contact-card">
-                            <span class="contact-card__label">WhatsApp / Phone:</span>
-                            <a href="https://wa.me/971582559902"
-                                class="contact-card__value contact-card__value--highlight">+971 58 255 9902</a>
+                <div class="hero-tiles__row">
+                    <article class="tile-card">
+                        <a href="polyurea-waterproofing.html" class="tile-card__media"
+                            aria-label="Polyurea Waterproofing">
+                            <img src="assets/images/main-hero_bottom-img1.png"
+                                alt="Polyurea waterproofing applied to a vessel deck" width="290" height="260">
+                            <span class="tile-card__plus" aria-hidden="true"></span>
+                        </a>
+                        <div class="tile-card__caption">
+                            <span class="tile-card__name">Polyurea Waterproofing</span>
+                            <span class="tile-card__num">/01</span>
                         </div>
-                        <div class="contact-card">
-                            <span class="contact-card__label">Email:</span>
-                            <a href="mailto:INFO@DANKETPLUS.RU"
-                                class="contact-card__value contact-card__value--highlight">INFO@DANKETPLUS.RU</a>
+                    </article>
+
+                    <article class="tile-card">
+                        <a href="pu-foam-insulation.html" class="tile-card__media" aria-label="SPF Insulation">
+                            <img src="assets/images/main-hero_bottom-img2.png"
+                                alt="SPF insulation sprayed inside a warehouse" width="290" height="260">
+                            <span class="tile-card__plus" aria-hidden="true"></span>
+                        </a>
+                        <div class="tile-card__caption">
+                            <span class="tile-card__name">SPF Insulation</span>
+                            <span class="tile-card__num">/02</span>
                         </div>
-                        <div class="contact-card">
-                            <span class="contact-card__label">Office Hours:</span>
-                            <span class="contact-card__value">THU, 8 AM–6 PM GST</span>
-                        </div>
-                        <div class="contact-card">
-                            <span class="contact-card__label">Location:</span>
-                            <span class="contact-card__value">DUBAI, UAE</span>
-                        </div>
-                    </div>
+                    </article>
 
-                    <!-- Right: Contact Form Card -->
-                    <form class="contact-form-card" id="projectContactForm" method="POST" action="#">
-                        <h2 class="contact-form-card__title">CONTACT FORM</h2>
-                        <div class="contact-form-card__divider"></div>
-
-                        <div class="contact-form-card__grid">
-                            <div class="contact-form-card_row">
-                                <!-- Name -->
-                                <div class="form-group grid-name">
-                                    <label class="form-label" for="formName">Name <span
-                                            class="required-star">*</span></label>
-                                    <input type="text" id="formName" name="name" required class="form-input">
-                                </div>
-
-                                <!-- Company -->
-                                <div class="form-group grid-company">
-                                    <label class="form-label" for="formCompany">Company</label>
-                                    <input type="text" id="formCompany" name="company" class="form-input">
-                                </div>
-
-                                <!-- Phone / WhatsApp -->
-                                <div class="form-group grid-phone">
-                                    <label class="form-label" for="formPhone">Phone / WhatsApp <span
-                                            class="required-star">*</span></label>
-                                    <input type="tel" id="formPhone" name="phone" required class="form-input">
-                                </div>
-
-                                <!-- Email -->
-                                <div class="form-group grid-email">
-                                    <label class="form-label" for="formEmail">Email</label>
-                                    <input type="email" id="formEmail" name="email" class="form-input">
-                                </div>
-
-                                <!-- Service needed -->
-                                <div class="form-group grid-service">
-                                    <label class="form-label" for="formService">Service needed</label>
-                                    <div class="select-wrapper">
-                                        <select id="formService" name="service">
-                                            <option value="Polyurea Waterproofing">Polyurea Waterproofing</option>
-                                            <option value="PU Foam Insulation">PU Foam Insulation</option>
-                                            <option value="Other Waterproofing">Other Waterproofing</option>
-                                        </select>
-                                    </div>
-                                </div>
-
+                    <article class="promo-card">
+                        <div class="promo-card__body">
+                            <div class="promo-card__head">
+                                <p class="promo-card__eyebrow">The perfect solution</p>
+                                <h2 class="promo-card__title">SPF + Polyurea — combined roofing system</h2>
                             </div>
-                            <!-- Project description -->
-                            <div class="form-group grid-desc">
-                                <label class="form-label" for="formDesc">Project description</label>
-                                <textarea id="formDesc" name="description" class="form-textarea"
-                                    placeholder="Building type, approximate area, what is happ..."></textarea>
-                            </div>
-
-                            <!-- File upload -->
-                            <div class="form-group grid-file">
-                                <label class="form-label" for="projectFiles">Project documents / Drawings / BOQ</label>
-                                <div class="file-upload" id="fileUploadContainer" role="button" tabindex="0">
-                                    <input type="file" id="projectFiles" name="documents" class="file-input-hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_3001_6228)">
-                                            <path
-                                                d="M19.1251 8.00001C18.9689 7.84379 18.7569 7.75602 18.536 7.75602C18.315 7.75602 18.1031 7.84379 17.9468 8.00001L8.87014 17.1158C8.48323 17.5028 8.0239 17.8098 7.51836 18.0192C7.01282 18.2287 6.47098 18.3365 5.92377 18.3365C4.81863 18.3366 3.75873 17.8977 2.97722 17.1163C2.19572 16.3349 1.75663 15.275 1.75655 14.1699C1.75648 13.0648 2.19541 12.0049 2.97681 11.2233L11.7676 2.39668C12.2377 1.93409 12.8715 1.67599 13.531 1.67859C14.1906 1.6812 14.8223 1.94431 15.2887 2.4106C15.7551 2.87689 16.0184 3.50859 16.0211 4.1681C16.0239 4.82761 15.766 5.4615 15.3035 5.93168L6.51264 14.7583C6.3541 14.9102 6.14303 14.995 5.92347 14.995C5.70392 14.995 5.49285 14.9102 5.33431 14.7583C5.17808 14.6021 5.09032 14.3901 5.09032 14.1692C5.09032 13.9482 5.17808 13.7363 5.33431 13.58L13.161 5.71751C13.3128 5.56034 13.3968 5.34984 13.3949 5.13134C13.393 4.91285 13.3053 4.70384 13.1508 4.54933C12.9963 4.39482 12.7873 4.30718 12.5688 4.30528C12.3503 4.30339 12.1398 4.38738 11.9826 4.53918L4.15597 12.4017C3.92378 12.6338 3.7396 12.9094 3.61393 13.2128C3.48827 13.5161 3.42359 13.8413 3.42359 14.1696C3.42359 14.4979 3.48827 14.8231 3.61393 15.1264C3.7396 15.4297 3.92378 15.7054 4.15597 15.9375C4.63232 16.3921 5.26546 16.6457 5.92389 16.6457C6.58232 16.6457 7.21546 16.3921 7.69181 15.9375L16.4818 7.11001C17.2468 6.32527 17.6718 5.27072 17.6648 4.17482C17.6578 3.07892 17.2193 2.02991 16.4443 1.25503C15.6693 0.480152 14.6202 0.0417996 13.5243 0.034933C12.4284 0.0280663 11.3739 0.453238 10.5893 1.21835L1.79847 10.045C0.704457 11.139 0.0898437 12.6228 0.0898438 14.17C0.0898438 15.7172 0.704457 17.201 1.79847 18.295C2.89249 19.389 4.3763 20.0036 5.92347 20.0036C7.47065 20.0036 8.95446 19.389 10.0485 18.295L19.1251 9.18168C19.203 9.10424 19.2648 9.01218 19.3069 8.91078C19.3491 8.80938 19.3708 8.70066 19.3708 8.59085C19.3708 8.48103 19.3491 8.37231 19.3069 8.27091C19.2648 8.16952 19.203 8.07745 19.1251 8.00001Z"
-                                                fill="#525A6B" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_3001_6228">
-                                                <rect width="20" height="20" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    <span id="fileLabelText" class="file-upload__text">Click to download the file</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="contact-form-card__footer">
-                            <label class="form-agreement">
-                                <input type="checkbox" name="agreement" required class="form-agreement__checkbox">
-                                <span class="form-agreement__text">
-                                    I agree with the <a href="#" class="form-agreement__link">privacy policy</a> and
-                                    consent to the processing of <a href="#" class="form-agreement__link">personal
-                                        data</a>
+                            <a href="pu-foam-insulation.html" class="promo-card__link">
+                                <span>More detailed</span>
+                                <span class="promo-card__arrow">
+                                    <img src="assets/images/arrow-up-right2.svg" alt="" width="28" height="28"
+                                        loading="lazy">
                                 </span>
-                            </label>
-                            <button type="submit" class="btn btn--primary form-submit-btn">Describe Your
-                                Project</button>
+                            </a>
                         </div>
-                    </form>
+                        <div class="promo-card__media">
+                            <img src="assets/images/main-hero_bottom-img3.png"
+                                alt="Hand touching a sprayed polyurethane foam surface" width="692" height="488"
+                                loading="lazy">
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
-
-        <!-- WhatsApp Section -->
-        <section class="whatsapp-section">
+        <!-- Why Dubai Requires A Different Approach -->
+        <section class="uae-conditions" id="applications">
             <div class="container">
-                <div class="whatsapp-card">
-                    <div class="whatsapp-card__content">
-                        <h2 class="whatsapp-card__title">WhatsApp — fastest way to reach us</h2>
-                        <div class="whatsapp-card__subtitle">
-                            Send us a message on WhatsApp: <a href="https://wa.me/971582559902"
-                                class="whatsapp-card__link" target="_blank">+971 58 255 9902</a>
-                        </div>
-                        <p class="whatsapp-card__text">
-                            Tell us about the building, surface condition and scope. We will respond quickly and arrange
-                            a call or site visit.
+                <div class="uae-conditions__grid">
+                    <div class="uae-conditions__info">
+                        <p class="uae-conditions__eyebrow">UAE conditions</p>
+                        <h2 class="uae-conditions__title">Why Dubai requires a different approach</h2>
+                        <p class="uae-conditions__description">
+                            Waterproofing in Dubai operates under constant thermal and environmental stress. Heat, UV
+                            radiation, humidity and thermal movement accelerate coating ageing and increase the risk of
+                            leaks, especially around joints and penetrations.
                         </p>
-                        <a href="https://wa.me/971582559902" class="whatsapp-card__btn" target="_blank">Open
-                            WhatsApp</a>
-                    </div>
-                    <div class="whatsapp-card__image-wrapper">
-                        <img src="assets/images/watsappTelephone-img.webp" alt="WhatsApp Chat Mockup"
-                            class="whatsapp-card__image" width="319" height="364" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Discuss Section -->
-        <section class="discuss-section">
-            <div class="container">
-                <div class="discuss-grid">
-                    <!-- Left: List -->
-                    <div class="discuss-content">
-                        <h2 class="discuss-title">What you can discuss with us</h2>
-                        <ul class="discuss-list">
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Subcontracting enquiries and tender opportunities — for
-                                    general and roofing contractors</span>
+                        <ul class="uae-conditions__list">
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                            <path
+                                                d="M18 12.75C17.9982 14.1418 17.4445 15.4762 16.4603 16.4603C15.4762 17.4445 14.1418 17.9982 12.75 18C8.19225 18.0877 5.74875 12.2715 9 9.08325V3.75C9.15825 -1.20675 16.3433 -1.2 16.5 3.75V9.08325C17.4592 10.063 17.9975 11.3789 18 12.75ZM15 12.75C14.9999 12.2848 14.8557 11.831 14.587 11.4512C14.3184 11.0713 13.9386 10.7841 13.5 10.629V6C13.5 5.80109 13.421 5.61032 13.2803 5.46967C13.1397 5.32902 12.9489 5.25 12.75 5.25C12.5511 5.25 12.3603 5.32902 12.2197 5.46967C12.079 5.61032 12 5.80109 12 6V10.629C11.6111 10.7665 11.2674 11.0083 11.0067 11.3279C10.7459 11.6475 10.578 12.0327 10.5213 12.4413C10.4647 12.8499 10.5214 13.2662 10.6854 13.6447C10.8494 14.0232 11.1143 14.3494 11.4511 14.5875C11.7879 14.8257 12.1837 14.9666 12.5953 14.995C13.0068 15.0234 13.4182 14.938 13.7845 14.7484C14.1509 14.5587 14.458 14.272 14.6723 13.9195C14.8867 13.5671 15.0001 13.1625 15 12.75ZM7.5 0.75C7.5 0.551088 7.42098 0.360322 7.28033 0.21967C7.13968 0.0790176 6.94891 0 6.75 0C6.55109 0 6.36032 0.0790176 6.21967 0.21967C6.07902 0.360322 6 0.551088 6 0.75V2.31225C5.72241 2.35886 5.44991 2.43194 5.18625 2.5305L4.404 1.134C4.35813 1.04411 4.2946 0.964406 4.2172 0.899652C4.1398 0.834899 4.05013 0.786432 3.95356 0.757152C3.85698 0.727873 3.75549 0.718384 3.65517 0.729253C3.55484 0.740122 3.45774 0.771126 3.36968 0.820408C3.28162 0.86969 3.20441 0.936237 3.14267 1.01606C3.08093 1.09589 3.03594 1.18735 3.01039 1.28498C2.98484 1.3826 2.97925 1.48438 2.99396 1.58422C3.00867 1.68405 3.04338 1.77989 3.096 1.866L3.888 3.27975C3.6595 3.46862 3.45 3.67937 3.2625 3.909L1.875 3.102C1.7897 3.04565 1.69379 3.00733 1.59314 2.98939C1.4925 2.97146 1.38925 2.97429 1.28974 2.99771C1.19023 3.02114 1.09655 3.06466 1.01447 3.1256C0.932395 3.18654 0.863641 3.26362 0.812436 3.3521C0.761231 3.44059 0.728656 3.5386 0.716711 3.64013C0.704767 3.74166 0.713705 3.84456 0.742977 3.94251C0.77225 4.04046 0.821238 4.1314 0.886932 4.20972C0.952627 4.28805 1.03364 4.35212 1.125 4.398L2.52075 5.21325C2.4276 5.4686 2.35806 5.73195 2.313 6H0.75C0.551088 6 0.360322 6.07902 0.21967 6.21967C0.0790176 6.36032 0 6.55109 0 6.75C0 6.94891 0.0790176 7.13968 0.21967 7.28033C0.360322 7.42098 0.551088 7.5 0.75 7.5H2.31375C2.36055 7.77731 2.43363 8.04953 2.532 8.313L1.134 9.096C1.04411 9.14187 0.964406 9.2054 0.899652 9.2828C0.834899 9.3602 0.786432 9.44987 0.757152 9.54644C0.727873 9.64302 0.718384 9.7445 0.729253 9.84483C0.740122 9.94516 0.771126 10.0423 0.820408 10.1303C0.86969 10.2184 0.936237 10.2956 1.01606 10.3573C1.09589 10.4191 1.18735 10.4641 1.28498 10.4896C1.3826 10.5152 1.48438 10.5208 1.58422 10.506C1.68405 10.4913 1.77989 10.4566 1.866 10.404L3.28125 9.61125C3.46959 9.83996 3.67984 10.0497 3.909 10.2375L3.102 11.625C3.01618 11.7959 2.99888 11.9931 3.05364 12.1763C3.10839 12.3595 3.23107 12.5149 3.39658 12.6107C3.56209 12.7065 3.75793 12.7354 3.94407 12.6916C4.13021 12.6478 4.29259 12.5345 4.398 12.375L5.21325 10.98L5.25 10.9935C6.3105 11.4862 6.60675 9.7575 7.10625 9.0435C7.36442 8.64732 7.50127 8.18437 7.5 7.7115V0.75Z"
+                                                fill="#F26522" />
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">Heat</span>
+                                </span>
+                                <span class="uae-conditions__text">Roof surfaces reach extreme temperatures.</span>
                             </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Waterproofing and insulation scope for commercial,
-                                    industrial and residential projects</span>
+
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                            <path
+                                                d="M10.5002 18C9.90904 18.0018 9.32337 17.8862 8.77721 17.6599C8.23106 17.4336 7.73531 17.101 7.31873 16.6815C6.47967 15.8352 6.0089 14.6917 6.0089 13.5C6.0089 12.3083 6.47967 11.1648 7.31873 10.3185L10.5002 6.94575L13.6975 10.3335C14.5292 11.1816 14.9938 12.3229 14.9908 13.5107C14.9879 14.6986 14.5176 15.8375 13.6817 16.6815C13.2652 17.101 12.7694 17.4336 12.2233 17.6599C11.6771 17.8862 11.0914 18.0018 10.5002 18ZM3.75023 9C3.25762 9.00121 2.76966 8.90472 2.31458 8.71613C1.85949 8.52753 1.44633 8.25056 1.09898 7.90125C0.399979 7.1959 0.0078125 6.24304 0.0078125 5.25C0.0078125 4.25696 0.399979 3.3041 1.09898 2.59875L3.75023 0.00524902L6.39548 2.59275C7.09747 3.29737 7.49212 4.25114 7.49324 5.24576C7.49437 6.24038 7.10187 7.19504 6.40148 7.90125C6.05421 8.25066 5.64106 8.52769 5.18596 8.7163C4.73086 8.9049 4.24286 9.00133 3.75023 9ZM15.0002 7.5C14.6061 7.50102 14.2157 7.42386 13.8517 7.27298C13.4876 7.1221 13.1571 6.9005 12.8792 6.621C12.3199 6.05678 12.0061 5.29447 12.0061 4.5C12.0061 3.70553 12.3199 2.94322 12.8792 2.379L14.9867 0.036749L17.1452 2.40375C17.6933 2.9703 17.9978 3.72899 17.9933 4.51727C17.9888 5.30555 17.6758 6.06072 17.1212 6.621C16.8434 6.9005 16.5129 7.1221 16.1488 7.27298C15.7847 7.42386 15.3943 7.50102 15.0002 7.5Z"
+                                                fill="#739EC9" />
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">Humidity</span>
+                                </span>
+                                <span class="uae-conditions__text">Moisture penetrates slabs and walls.</span>
                             </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Foundation and basement waterproofing — new-build and
-                                    retrofit</span>
+
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_859_5786)">
+                                                <path
+                                                    d="M14.19 9.75C14.1313 10.1645 14.023 10.5704 13.8675 10.959L17.1562 12.8738L16.4062 14.1705L13.1152 12.2543C12.8678 12.5671 12.5855 12.8507 12.2738 13.0995L14.1923 16.3995L12.8925 17.1532L10.9777 13.86C10.5836 14.0199 10.1712 14.1308 9.75 14.19V18H8.25V14.19C7.83246 14.1313 7.42367 14.0218 7.03275 13.8638L5.12025 17.1532L3.825 16.3988L5.73975 13.1063C5.42639 12.8572 5.14255 12.5731 4.89375 12.2595L1.61025 14.1705L0.85575 12.8738L4.13475 10.9643C3.97793 10.5741 3.86889 10.1664 3.81 9.75H0V8.25H3.81C3.86928 7.83153 3.97909 7.42179 4.137 7.02975L0.8505 5.1165L1.605 3.8205L4.89525 5.736C5.14815 5.41885 5.43681 5.13195 5.7555 4.881L3.8445 1.59525L5.1405 0.84075L7.05 4.12875C7.43579 3.97482 7.83868 3.86781 8.25 3.81V0H9.75V3.81C10.164 3.86868 10.5694 3.97696 10.9575 4.1325L12.8715 0.84075L14.1675 1.59525L12.2535 4.88775C12.57 5.1386 12.8568 5.42469 13.1085 5.7405L16.4085 3.8205L17.163 5.1165L13.863 7.03575C14.0206 7.42583 14.1304 7.83354 14.19 8.25H18V9.75H14.19Z"
+                                                    fill="#F26522" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_859_5786">
+                                                    <rect width="18" height="18" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">UV Exposure</span>
+                                </span>
+                                <span class="uae-conditions__text">Standard coatings degrade faster.</span>
                             </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Roof insulation and waterproofing — SPF, polyurea or
-                                    combined system</span>
+
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_946_6274)">
+                                                <path
+                                                    d="M17.958 5.7465L9 0.375L0.0419998 5.7465L9 11.121L17.958 5.7465Z"
+                                                    fill="#739EC9" />
+                                                <path
+                                                    d="M18 10.4738L9 15.8738L0 10.4738V12.2235L9 17.6228L18 12.2235V10.4738Z"
+                                                    fill="#739EC9" />
+                                                <path
+                                                    d="M18 7.22546L16.1138 8.35721L9 12.6255L1.88625 8.35721L0 7.22546V8.97446L9 14.3745L18 8.97446V7.22546Z"
+                                                    fill="#739EC9" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_946_6274">
+                                                    <rect width="18" height="18" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">Thermal Movement</span>
+                                </span>
+                                <span class="uae-conditions__text">Daily expansion stresses joints and seams.</span>
                             </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Swimming pool waterproofing</span>
+
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_946_6281)">
+                                                <path
+                                                    d="M9 0C4.035 0 0 4.035 0 9C0 13.965 4.035 18 9 18C13.965 18 18 13.965 18 9C18 4.035 13.965 0 9 0ZM11.7975 10.1175L9.6525 13.875C9.5175 14.115 9.2625 14.25 9 14.25C8.8725 14.25 8.745 14.22 8.625 14.1525C8.265 13.95 8.1375 13.485 8.3475 13.1325L10.2825 9.7575H7.215C6.8325 9.7575 6.4725 9.5775 6.24 9.27C6.0075 8.9625 5.94 8.565 6.0525 8.1975C6.0675 8.145 6.09 8.0925 6.12 8.04L8.3475 4.1325C8.55 3.7725 9.0075 3.645 9.3675 3.855C9.7275 4.0575 9.855 4.515 9.645 4.875L7.7175 8.25H10.7925C11.235 8.25 11.64 8.49 11.85 8.8875C12.06 9.285 12.0375 9.75 11.79 10.1175H11.7975Z"
+                                                    fill="#F26522" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_946_6281">
+                                                    <rect width="18" height="18" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">AC Load</span>
+                                </span>
+                                <span class="uae-conditions__text">Constant cooling increases roof temperature
+                                    gradients.</span>
                             </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Site inspection and system recommendation</span>
-                            </li>
-                            <li class="discuss-item">
-                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
-                                    width="18" height="18" loading="lazy">
-                                <span class="discuss-item__text">Technical review of drawings or BOQ</span>
+
+                            <li class="uae-conditions__item">
+                                <span class="uae-conditions__head">
+                                    <span class="uae-conditions__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none">
+                                            <g clip-path="url(#clip0_946_6313)">
+                                                <path
+                                                    d="M8.25 0H2.25C1.65326 0 1.08097 0.237053 0.65901 0.65901C0.237053 1.08097 0 1.65326 0 2.25L0 18H10.5V2.25C10.5 1.65326 10.2629 1.08097 9.84099 0.65901C9.41903 0.237053 8.84674 0 8.25 0ZM4.5 14.25H2.25V12.75H4.5V14.25ZM4.5 11.25H2.25V9.75H4.5V11.25ZM4.5 8.25H2.25V6.75H4.5V8.25ZM4.5 5.25H2.25V3.75H4.5V5.25ZM8.25 14.25H6V12.75H8.25V14.25ZM8.25 11.25H6V9.75H8.25V11.25ZM8.25 8.25H6V6.75H8.25V8.25ZM8.25 5.25H6V3.75H8.25V5.25ZM15.75 3.75H12V18H18V6C18 5.40326 17.7629 4.83097 17.341 4.40901C16.919 3.98705 16.3467 3.75 15.75 3.75ZM15.75 14.25H14.25V12.75H15.75V14.25ZM15.75 11.25H14.25V9.75H15.75V11.25ZM15.75 8.25H14.25V6.75H15.75V8.25Z"
+                                                    fill="#739EC9" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_946_6313">
+                                                    <rect width="18" height="18" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="uae-conditions__label">Roofs &amp; Joints</span>
+                                </span>
+                                <span class="uae-conditions__text">The most common locations where leaks begin.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Right: Image -->
-                    <div class="discuss-image-wrapper">
-                        <img src="assets/images/discuss_img.webp" alt="Dubai roof waterproofing discuss"
-                            class="discuss-image" width="511" height="435" loading="lazy">
+                    <div class="uae-conditions__media">
+                        <div class="uae-conditions__photo uae-conditions__photo--tall">
+                            <img src="assets/images/different-approach_img1.png"
+                                alt="Waterfront promenade in the UAE under strong sunlight" width="498" height="954"
+                                loading="lazy">
+                        </div>
+                        <div class="uae-conditions__photo uae-conditions__photo--short">
+                            <img src="assets/images/different-approach_img2.png"
+                                alt="Operator spraying a protective coating on a villa roof" width="498" height="754"
+                                loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Enquiries Section -->
-        <section class="steps-section">
+        <!-- Why Details Matter: risk-zone tiles + closing note -->
+        <section class="details-matter" aria-labelledby="details-matter-title">
             <div class="container">
-                <h2 class="section-title">How we handle enquiries</h2>
+                <p class="details-matter__eyebrow">Risk zones</p>
+                <h2 class="section-title" id="details-matter-title">Why details matter</h2>
+
+                <p class="details-matter__text">
+                    Most waterproofing failures do not begin on open roof surfaces. They start at construction
+                    details where different materials meet, movement occurs or service penetrations interrupt the
+                    membrane. These areas require reinforced treatment and careful application.
+                </p>
+
+                <p class="details-matter__label">Vulnerable points include:</p>
+
+                <ul class="details-matter__grid">
+                    <li class="risk-card">
+                        <img src="assets/images/details-matter_img1.png"
+                            alt="Expansion joint between two concrete parapet sections" width="392" height="260"
+                            loading="lazy">
+                        <span class="risk-card__name">Structural joints &amp; connections</span>
+                    </li>
+
+                    <li class="risk-card">
+                        <img src="assets/images/details-matter_img2.png" alt="Service pipes penetrating a rooftop wall"
+                            width="392" height="260" loading="lazy">
+                        <span class="risk-card__name">Service entry points and pipe penetrations</span>
+                    </li>
+
+                    <li class="risk-card">
+                        <img src="assets/images/details-matter_img3.png"
+                            alt="Tiled residential terrace with a glass balustrade" width="392" height="260"
+                            loading="lazy">
+                        <span class="risk-card__name">Terraces and balconies</span>
+                    </li>
+
+                    <li class="risk-card">
+                        <img src="assets/images/details-matter_img4.png"
+                            alt="Rooftop swimming pool surrounded by stone decking" width="392" height="260"
+                            loading="lazy">
+                        <span class="risk-card__name">Areas around pools</span>
+                    </li>
+
+                    <li class="risk-card">
+                        <img src="assets/images/details-matter_img5.png"
+                            alt="Transition seam between a roof deck and its parapet" width="392" height="260"
+                            loading="lazy">
+                        <span class="risk-card__name">Seams and transitions between materials</span>
+                    </li>
+
+                    <li class="risk-note">
+                        <p>Leaks most often appear in these zones — not in the middle of flat surfaces.</p>
+                        <p>Details determine how the system performs in operation.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- How Roof Problems Develop: early-signs card + two photos, closing notes -->
+        <section class="roof-problems" aria-labelledby="roof-problems-title">
+            <div class="container">
+                <p class="roof-problems__eyebrow">Failure progression</p>
+                <h2 class="roof-problems__title" id="roof-problems-title">How roof problems develop</h2>
+                <p class="roof-problems__lead">
+                    Building envelope problems usually develop gradually — long before visible leaks appear.
+                </p>
+
+                <div class="roof-problems__grid">
+                    <div class="roof-problems__card">
+                        <p class="roof-problems__card-title">Early signs:</p>
+
+                        <ul class="roof-problems__signs">
+                            <li class="roof-problems__sign">
+                                <span class="roof-problems__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_862_7813)">
+                                            <path
+                                                d="M14.6927 9.89551C13.509 9.08508 13.1417 7.47584 13.8564 6.23194C14.0718 5.85728 13.8863 5.55504 13.7965 5.44244C13.7068 5.3299 13.4534 5.08188 13.0403 5.20833C12.7807 5.2879 12.5108 5.32834 12.2393 5.32832C11.1293 5.32836 10.0795 4.65427 9.65461 3.57793C9.49591 3.17595 9.14393 3.13257 9 3.13257C8.85603 3.13257 8.50412 3.17595 8.3455 3.57789C7.92056 4.65413 6.87066 5.32825 5.7607 5.32832C5.48927 5.32835 5.21935 5.28791 4.95984 5.20833C4.87937 5.18369 4.80498 5.17325 4.73664 5.17325C4.45409 5.17325 4.27577 5.35181 4.20349 5.44244C4.1137 5.55501 3.92822 5.85728 4.14352 6.23191C4.85831 7.4757 4.49107 9.08494 3.30736 9.89547C2.95084 10.1396 2.98684 10.4925 3.01887 10.6328C3.05089 10.7731 3.17155 11.1066 3.59866 11.1719C5.0168 11.3885 6.04593 12.679 5.94158 14.1099C5.91015 14.5408 6.20849 14.7326 6.33818 14.7951C6.46784 14.8575 6.80389 14.9711 7.12111 14.6779C7.63123 14.2065 8.29846 13.947 9.00004 13.947C9.70165 13.947 10.3689 14.2065 10.8789 14.6778C11.1962 14.9711 11.5322 14.8575 11.6619 14.7951C11.7915 14.7326 12.0899 14.5407 12.0585 14.1098C11.954 12.679 12.9832 11.3885 14.4014 11.1719C14.8285 11.1066 14.9492 10.7731 14.9812 10.6328C15.0132 10.4923 15.0492 10.1396 14.6927 9.89551Z"
+                                                fill="#F26522" />
+                                            <path
+                                                d="M16.6142 7.99576C16.344 7.81076 16.2602 7.44345 16.4233 7.15953C17.0786 6.01934 16.9721 4.61823 16.1522 3.59005C15.3321 2.56176 13.9897 2.14628 12.7324 2.53153C12.4194 2.6274 12.08 2.46399 11.9598 2.15933C11.4768 0.9361 10.315 0.145752 8.99992 0.145752C7.68483 0.145752 6.52306 0.936135 6.04019 2.15933C5.91992 2.46388 5.58031 2.62726 5.26739 2.53149C4.00995 2.14649 2.66761 2.56201 1.84774 3.59008C1.02779 4.6183 0.921369 6.01941 1.57665 7.15956C1.73984 7.44349 1.65596 7.81076 1.38575 7.99579C0.300615 8.73885 -0.211366 10.0474 0.0812747 11.3294C0.37388 12.6116 1.40301 13.5683 2.70302 13.767C3.02674 13.8164 3.26165 14.111 3.23781 14.4375C3.14215 15.7492 3.84595 16.9653 5.03085 17.5359C5.46887 17.7469 5.93483 17.8538 6.41583 17.8538C7.21409 17.8538 7.97951 17.5526 8.57112 17.006C8.81173 16.7837 9.18847 16.7837 9.42883 17.006C10.0326 17.564 10.8019 17.8544 11.5833 17.8543C12.0519 17.8543 12.525 17.7498 12.9691 17.5359C14.154 16.9654 14.8578 15.7492 14.7621 14.4376C14.7383 14.111 14.9733 13.8165 15.297 13.767C16.597 13.5684 17.6261 12.6116 17.9187 11.3295C18.2113 10.0473 17.6992 8.73875 16.6142 7.99576ZM15.6667 10.7892L15.6667 10.7892C15.5637 11.2404 15.2051 11.7603 14.5075 11.8669C13.4495 12.0285 12.6818 12.9912 12.7597 14.0586C12.811 14.7624 12.3838 15.2277 11.9669 15.4285C11.5499 15.6292 10.9199 15.6731 10.4016 15.1942C10.0219 14.8433 9.52417 14.65 8.99996 14.65C8.47578 14.65 7.978 14.8433 7.59824 15.1942C7.30142 15.4686 6.96775 15.5714 6.65855 15.5714C6.428 15.5714 6.21112 15.5143 6.03305 15.4286C5.61613 15.2278 5.18892 14.7625 5.24024 14.0587C5.31812 12.9913 4.55037 12.0285 3.49235 11.8669C2.79485 11.7603 2.43625 11.2404 2.33324 10.7893C2.23031 10.3381 2.32783 9.71402 2.91002 9.31535C3.79304 8.71069 4.06708 7.51014 3.53379 6.58223C3.1822 5.97041 3.36511 5.36586 3.65357 5.00407C3.94203 4.64224 4.4905 4.32935 5.16557 4.536C6.1888 4.84934 7.29836 4.31504 7.69137 3.31962C7.95047 2.66329 8.5372 2.4294 8.99992 2.4294C9.46265 2.4294 10.0494 2.66329 10.3086 3.31966C10.7016 4.31507 11.8109 4.84931 12.8344 4.536C13.509 4.32938 14.0578 4.64224 14.3463 5.00403C14.6348 5.36586 14.8177 5.97041 14.4661 6.58223C13.9329 7.51018 14.2069 8.71069 15.0899 9.31531C15.6722 9.71402 15.7696 10.3381 15.6667 10.7892Z"
+                                                fill="#F26522" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_862_7813">
+                                                <rect width="18" height="18" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="roof-problems__sign-text">Surface cracking and joint movement</span>
+                            </li>
+
+                            <li class="roof-problems__sign">
+                                <span class="roof-problems__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 18"
+                                        fill="none" aria-hidden="true">
+                                        <path
+                                            d="M10.5002 18C9.90904 18.0018 9.32337 17.8862 8.77721 17.6599C8.23106 17.4336 7.73531 17.101 7.31873 16.6815C6.47967 15.8352 6.0089 14.6917 6.0089 13.5C6.0089 12.3083 6.47967 11.1648 7.31873 10.3185L10.5002 6.94575L13.6975 10.3335C14.5292 11.1816 14.9938 12.3229 14.9908 13.5107C14.9879 14.6986 14.5176 15.8375 13.6817 16.6815C13.2652 17.101 12.7694 17.4336 12.2233 17.6599C11.6771 17.8862 11.0914 18.0018 10.5002 18ZM3.75023 9C3.25762 9.00121 2.76966 8.90472 2.31458 8.71613C1.85949 8.52753 1.44633 8.25056 1.09898 7.90125C0.399979 7.1959 0.0078125 6.24304 0.0078125 5.25C0.0078125 4.25696 0.399979 3.3041 1.09898 2.59875L3.75023 0.00524902L6.39548 2.59275C7.09747 3.29737 7.49212 4.25114 7.49324 5.24576C7.49437 6.24038 7.10187 7.19504 6.40148 7.90125C6.05421 8.25066 5.64106 8.52769 5.18596 8.7163C4.73086 8.9049 4.24286 9.00133 3.75023 9ZM15.0002 7.5C14.6061 7.50102 14.2157 7.42386 13.8517 7.27298C13.4876 7.1221 13.1571 6.9005 12.8792 6.621C12.3199 6.05678 12.0061 5.29447 12.0061 4.5C12.0061 3.70553 12.3199 2.94322 12.8792 2.379L14.9867 0.036749L17.1452 2.40375C17.6933 2.9703 17.9978 3.72899 17.9933 4.51727C17.9888 5.30555 17.6758 6.06072 17.1212 6.621C16.8434 6.9005 16.5129 7.1221 16.1488 7.27298C15.7847 7.42386 15.3943 7.50102 15.0002 7.5Z"
+                                            fill="#739EC9" />
+                                    </svg>
+                                </span>
+                                <span class="roof-problems__sign-text">Condensation around AC and service
+                                    penetrations</span>
+                            </li>
+
+                            <li class="roof-problems__sign">
+                                <span class="roof-problems__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_862_7826)">
+                                            <mask id="mask0_862_7826" style="mask-type:luminance"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+                                                <path d="M0 5.34058e-05H17.9999V18H0V5.34058e-05Z" fill="white" />
+                                            </mask>
+                                            <g mask="url(#mask0_862_7826)">
+                                                <path
+                                                    d="M8.291 12.8601C7.1524 12.808 5.80575 12.9364 4.75915 12.3802C5.03949 13.3092 5.53475 14.1331 6.33724 14.7576C7.51549 15.6745 8.81442 15.8262 10.243 15.9474C11.8278 16.0819 13.5385 16.2425 15.2072 17.5789C14.9104 15.5379 13.69 13.9981 11.7199 13.3383C10.6073 12.9658 9.45435 12.9134 8.291 12.8601Z"
+                                                    fill="#F26522" />
+                                                <path
+                                                    d="M6.39411 4.39633C7.03777 4.50401 7.69288 4.55343 8.38649 4.60572C9.45683 4.68644 10.5594 4.76989 11.6735 5.0795C11.2721 3.67713 10.2962 2.62731 8.84106 2.14004C7.89069 1.82178 6.89328 1.89567 5.91215 1.73151C4.75422 1.53779 3.54681 1.1793 2.70974 0.474131C2.82363 1.26185 3.26433 2.88075 4.30752 3.93401C4.94382 4.11572 5.63967 4.27009 6.39411 4.39633Z"
+                                                    fill="#F26522" />
+                                                <path
+                                                    d="M9.34186 10.6035C11.9027 10.8207 14.6621 11.0835 17.3592 13.2449C16.8816 9.94562 14.9103 7.45634 11.7268 6.39031C9.93009 5.78865 8.04451 5.92838 6.18967 5.61802C4.00052 5.25176 1.71791 4.57406 0.135411 3.2409C0.446211 5.39007 1.29289 7.32668 3.03468 8.68206C4.93735 10.1627 7.0349 10.4078 9.34186 10.6035Z"
+                                                    fill="#F26522" />
+                                            </g>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_862_7826">
+                                                <rect width="18" height="18" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <span class="roof-problems__sign-text">Local damp areas or staining</span>
+                            </li>
+                        </ul>
+
+                        <p class="roof-problems__card-text">
+                            These signs indicate that the roof system is already under stress. Without timely
+                            maintenance, insulation performance decreases and moisture begins to penetrate the
+                            structure.
+                        </p>
+                    </div>
+
+                    <div class="roof-problems__photo">
+                        <img src="assets/images/roof-problems_img.png"
+                            alt="Condensation running down roof sheeting above damp insulation" width="597" height="574"
+                            loading="lazy">
+                    </div>
+
+                    <div class="roof-problems__photo">
+                        <img src="assets/images/roof-problems_img2.png"
+                            alt="Cracked and stained concrete parapet on a weathered building" width="597" height="574"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <div class="roof-problems__notes">
+                    <p class="roof-problems__note">
+                        As the system deteriorates, joints open, protective layers wear down and thermal performance
+                        declines. Small defects become larger and repair costs increase over time.
+                    </p>
+                    <p class="roof-problems__note">
+                        In Dubai, constant heat, UV exposure and daily thermal movement accelerate this process. Roof
+                        systems must resist both moisture and extreme environmental conditions to maintain long-term
+                        performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services: two service rows plus the combined-system row.
+             Hidden below 768px — see .core-services in style.scss. -->
+        <section class="core-services" aria-labelledby="core-services-title">
+            <div class="container">
+                <p class="core-services__eyebrow">Our solutions</p>
+                <h2 class="core-services__title" id="core-services-title">Core services</h2>
+
+                <article class="core-services__row">
+                    <div class="core-services__body">
+                        <div class="core-services__head">
+                            <h3 class="core-services__name">Polyurea waterproofing</h3>
+                            <p class="core-services__text">
+                                Spray-applied seamless membrane. No seams, no joints, no weak points. Used for roofs,
+                                pools, foundations, terraces and underground structures. Cures in minutes, elastic
+                                under thermal movement, resistant to UAE heat and UV.
+                            </p>
+                        </div>
+                        <a href="polyurea-waterproofing.html" class="core-services__link">
+                            <span>More detailed</span>
+                            <span class="core-services__arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.66675 11.3333L11.3334 4.66663" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M4.66675 4.66663H11.3334V11.3333" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="core-services__media">
+                        <img src="assets/images/core-services_img1.png"
+                            alt="Polyurea membrane sprayed across a vessel deck" width="584" height="287"
+                            loading="lazy">
+                    </div>
+                </article>
+
+                <article class="core-services__row">
+                    <div class="core-services__body">
+                        <div class="core-services__head">
+                            <h3 class="core-services__name">SPF insulation (spray polyurethane foam)</h3>
+                            <p class="core-services__text">
+                                Spray-applied insulation that bonds directly to the substrate and covers the entire
+                                surface as one continuous layer. Reduces roof heat load, stabilises indoor
+                                temperature, lowers AC costs. Applied to roofs, walls and ceilings — including complex
+                                geometry.
+                            </p>
+                        </div>
+                        <a href="pu-foam-insulation.html" class="core-services__link">
+                            <span>More detailed</span>
+                            <span class="core-services__arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.66675 11.3333L11.3334 4.66663" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M4.66675 4.66663H11.3334V11.3333" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="core-services__media">
+                        <img src="assets/images/core-services_img2.png"
+                            alt="Spray polyurethane foam applied to a warehouse roof deck" width="584" height="287"
+                            loading="lazy">
+                    </div>
+                </article>
+
+                <article class="core-services__row core-services__row--combined">
+                    <div class="core-services__body">
+                        <div class="core-services__head">
+                            <h3 class="core-services__name">SPF + Polyurea — combined roofing system</h3>
+                            <p class="core-services__text">
+                                SPF as the insulation base, polyurea as the waterproofing membrane on top. The most
+                                complete solution for exposed roofs in Dubai: thermal protection and seamless
+                                waterproofing in a single system.
+                            </p>
+                        </div>
+                        <a href="pu-foam-insulation.html" class="core-services__link">
+                            <span>More detailed</span>
+                            <span class="core-services__arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.66675 11.3333L11.3334 4.66663" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M4.66675 4.66663H11.3334V11.3333" stroke="#FFF" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="core-services__media">
+                        <img src="assets/images/core-services_img3.png"
+                            alt="Completed combined SPF and polyurea roof on a concrete structure" width="560"
+                            height="287" loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Main Applications: intro cell plus five use-case cards -->
+        <section class="applications" aria-labelledby="applications-title">
+            <div class="container">
+                <ul class="applications__grid">
+                    <li class="applications__intro">
+                        <p class="applications__eyebrow">Use cases</p>
+                        <h2 class="applications__title" id="applications-title">Main applications</h2>
+                    </li>
+
+                    <li class="app-card">
+                        <img class="app-card__media" src="assets/images/main-aplications_img1.png"
+                            alt="Spray foam insulation applied over a villa roof slab" width="172" height="113"
+                            loading="lazy">
+                        <h3 class="app-card__title">Villa Roof Insulation</h3>
+                        <p class="app-card__text">
+                            SPF applied to roof slabs, cavities and pitched sections. Reduces heat ingress, stabilises
+                            indoor temperature, lowers AC load. Combined with polyurea waterproofing where required.
+                        </p>
+                    </li>
+
+                    <li class="app-card">
+                        <img class="app-card__media" src="assets/images/main-aplications_img2.png"
+                            alt="Coated below-grade slab beside a residential building" width="172" height="113"
+                            loading="lazy">
+                        <h3 class="app-card__title">Foundation Waterproofing</h3>
+                        <p class="app-card__text">
+                            Polyurea applied to basement walls, slabs and below-grade structures. Handles hydrostatic
+                            pressure. Used for underground car parks, lift pits and retaining walls.
+                        </p>
+                    </li>
+
+                    <li class="app-card">
+                        <img class="app-card__media" src="assets/images/main-aplications_img3.png"
+                            alt="Swimming pool shell finished with blue polyurea coating" width="172" height="113"
+                            loading="lazy">
+                        <h3 class="app-card__title">Pools &amp; Water Features</h3>
+                        <p class="app-card__text">
+                            Polyurea waterproofing for swimming pool shells, overflow channels and wet areas. System
+                            selected and certified for continuous water contact. Chemical resistance matched to pool
+                            treatment type.
+                        </p>
+                    </li>
+
+                    <li class="app-card">
+                        <img class="app-card__media" src="assets/images/main-aplications_img4.png"
+                            alt="Flat commercial roof with a seamless grey membrane" width="172" height="113"
+                            loading="lazy">
+                        <h3 class="app-card__title">Commercial Roof Waterproofing</h3>
+                        <p class="app-card__text">
+                            Polyurea seamless membrane for flat commercial roofs. Covers the full surface including
+                            parapets, drainage points, penetrations and junctions — the zones where leaks start.
+                        </p>
+                    </li>
+
+                    <li class="app-card">
+                        <img class="app-card__media" src="assets/images/main-aplications_img5.png"
+                            alt="Insulated underside of a warehouse metal roof structure" width="172" height="113"
+                            loading="lazy">
+                        <h3 class="app-card__title">Warehouse Roofing Systems</h3>
+                        <p class="app-card__text">
+                            SPF insulation applied to the underside of metal roof panels. Eliminates heat retention,
+                            removes condensation at joints. Can be combined with polyurea protective coat on external
+                            seams.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!-- Who Typically Orders Section -->
+        <section class="orders" style="margin-bottom: 0 !important;">
+            <div class="container">
+                <span class="orders__eyebrow">
+                    <img src="assets/images/red-dot.svg" alt="" class="orders__eyebrow-dot" width="8" height="8"
+                        loading="lazy">
+                    Our Clients
+                </span>
+                <h2 class="section-title orders__title">
+                    <span class="orders__title-text orders__title-text--desktop">Who typically orders polyurea
+                        waterproofing</span>
+                    <span class="orders__title-text orders__title-text--mobile">Who we work with</span>
+                </h2>
+
+                <div class="orders__slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img1.webp" alt="Residential development"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label orders-card__label--desktop">Developers</span>
+                                    <span class="orders-card__label orders-card__label--mobile">Developers and
+                                        project owners</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img2.webp" alt="Main contractors on site"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label">Main Contractors</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img3.webp" alt="Flat roof waterproofing"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label">Roofing contractors</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img4.webp" alt="Industrial warehouse"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label">Industrial Operators</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img5.webp" alt="Facility manager on site"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label orders-card__label--desktop">Facility Management
+                                        Companies</span>
+                                    <span class="orders-card__label orders-card__label--mobile">Facility and
+                                        property management companies</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img6.webp" alt="Facility manager on site"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label orders-card__label--desktop">Property
+                                        Owners</span>
+                                    <span class="orders-card__label orders-card__label--mobile">Property
+                                        Owners</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide orders__slide">
+                            <figure class="orders-card">
+                                <img src="assets/images/orders-section_img7.webp" alt="Facility manager on site"
+                                    class="orders-card__img" width="270" height="358" loading="lazy">
+                                <figcaption class="orders-card__caption">
+                                    <img src="assets/images/red-dot.svg" alt="" class="orders-card__dot" width="8"
+                                        height="8" loading="lazy">
+                                    <span class="orders-card__label orders-card__label--desktop">Facility and
+                                        property management companies</span>
+                                    <span class="orders-card__label orders-card__label--mobile">Facility and
+                                        property management companies</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Why Choose Us -->
+        <section class="advantages" aria-labelledby="advantages-title">
+            <div class="container">
+                <div class="advantages__top">
+                    <div class="advantages__intro">
+                        <p class="advantages__eyebrow">Our advantages</p>
+                        <h2 class="advantages__title" id="advantages-title">Why choose us</h2>
+                        <p class="advantages__description">
+                            We specialise in two spray-applied systems — polyurea and SPF — and focus on their correct
+                            selection and application for UAE climate conditions.
+                        </p>
+                    </div>
+
+                    <ul class="advantages__stats">
+                        <li class="advantages__stat">
+                            <span class="advantages__stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none" aria-hidden="true">
+                                    <circle cx="9" cy="9" r="9" fill="#FFFFFF" fill-opacity="0.55" />
+                                    <path d="M5 9.2L7.6 11.8L13 6.4" stroke="#5B87B6" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>10+ years in the field</span>
+                        </li>
+                        <li class="advantages__stat">
+                            <span class="advantages__stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none" aria-hidden="true">
+                                    <circle cx="9" cy="9" r="9" fill="#FFFFFF" fill-opacity="0.55" />
+                                    <path d="M5 9.2L7.6 11.8L13 6.4" stroke="#5B87B6" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Hundreds of completed projects</span>
+                        </li>
+                        <li class="advantages__stat">
+                            <span class="advantages__stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none" aria-hidden="true">
+                                    <circle cx="9" cy="9" r="9" fill="#FFFFFF" fill-opacity="0.55" />
+                                    <path d="M5 9.2L7.6 11.8L13 6.4" stroke="#5B87B6" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Villas, commercial and industrial buildings</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="advantages__grid">
+                    <article class="adv-card">
+                        <div class="adv-card__chips">
+                            <span class="adv-card__chip">SPF Roofing</span>
+                            <span class="adv-card__chip">Polyurea Roofing</span>
+                        </div>
+                        <h3 class="adv-card__title">Specialized spray systems</h3>
+                        <p class="adv-card__text">
+                            SPF roofing systems for UAE heat loads and polyurea waterproofing without joints or
+                            overlaps.
+                        </p>
+                        <ul class="adv-card__list">
+                            <li>SPF Roofing Systems</li>
+                            <li>Polyurea Roofing Systems</li>
+                            <li>Seamless Spray-Applied Systems</li>
+                            <li>Solutions Designed for UAE Climate</li>
+                        </ul>
+                    </article>
+
+                    <div class="advantages__photos">
+                        <div class="advantages__photo">
+                            <img src="assets/images/why-choose-us_img1.png"
+                                alt="Coated roof surface after spray application" width="378" height="566"
+                                loading="lazy">
+                        </div>
+                        <div class="advantages__photo">
+                            <img src="assets/images/why-choose-us_img2.png" alt="Sprayed foam insulation on a facade"
+                                width="378" height="566" loading="lazy">
+                        </div>
+                        <div class="advantages__photo advantages__photo--wide-only">
+                            <img src="assets/images/why-choose-us_img3.png" alt="High-pressure spray reactor on site"
+                                width="378" height="566" loading="lazy">
+                        </div>
+                    </div>
+
+                    <article class="adv-card">
+                        <div class="adv-card__chips">
+                            <span class="adv-card__chip">Graco Equipment</span>
+                            <span class="adv-card__chip">Layer Control</span>
+                        </div>
+                        <h3 class="adv-card__title">On-site control</h3>
+                        <p class="adv-card__text">
+                            Own high-pressure spray reactors and experienced crews for consistent output, layer control
+                            and material quality on site.
+                        </p>
+                        <ul class="adv-card__list">
+                            <li>Own high-pressure spray reactors</li>
+                            <li>Correct selection and application</li>
+                            <li>Reinforced details</li>
+                            <li>High-adhesion primers</li>
+                        </ul>
+                    </article>
+
+                    <article class="adv-card">
+                        <div class="adv-card__chips">
+                            <span class="adv-card__chip">Fixed Scope</span>
+                            <span class="adv-card__chip">Certificates</span>
+                            <span class="adv-card__chip">As-built Records</span>
+                        </div>
+                        <h3 class="adv-card__title">Fixed scope &amp; documentation</h3>
+                        <p class="adv-card__text">
+                            Agreed timeline, scope and materials before work begins. Full handover documentation after
+                            completion.
+                        </p>
+                        <ul class="adv-card__list">
+                            <li>Roof Restoration Without Replacement</li>
+                            <li>Fixed-scope contracts</li>
+                            <li>Full documentation on handover</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiries Section -->
+        <!-- How We Work: the shared steps component with the home-page variant -->
+        <section class="steps-section steps-section--workflow" id="process">
+            <div class="container">
+                <p class="steps-eyebrow">Workflow</p>
+                <h2 class="section-title">How we work</h2>
+                <p class="steps-lead">
+                    The service life of waterproofing is not defined after completion — it is formed during execution.
+                </p>
+
                 <div class="steps-container">
                     <div class="step-item">
                         <div class="step-circle">01</div>
                         <div class="step-content">
-                            <h3 class="step-title">Review</h3>
-                            <p class="step-description">We review your project details or documents.</p>
+                            <h3 class="step-title">Inspection</h3>
+                            <p class="step-description">We assess the substrate, identify risk zones and define the
+                                scope.</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle">02</div>
                         <div class="step-content">
-                            <h3 class="step-title">Site visit</h3>
-                            <p class="step-description">We arrange an inspection or review drawings and photos.</p>
+                            <h3 class="step-title">System selection</h3>
+                            <p class="step-description">Polyurea, SPF or combined — matched to the structure and UAE
+                                climate conditions.</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle">03</div>
                         <div class="step-content">
-                            <h3 class="step-title">Recommendation</h3>
-                            <p class="step-description">System recommendation tailored to the structure and UAE
-                                conditions.</p>
+                            <h3 class="step-title">Application</h3>
+                            <p class="step-description">Surface preparation, detail treatment, spray application with
+                                layer thickness control.</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle">04</div>
                         <div class="step-content">
-                            <h3 class="step-title">Quotation</h3>
-                            <p class="step-description">Fixed quote with scope, timeline and materials.</p>
+                            <h3 class="step-title">Handover</h3>
+                            <p class="step-description">Final inspection, material certificates and as-built
+                                documentation.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- UAE Section -->
-        <section class="uae-section">
-            <div class="container">
-                <div class="uae-grid">
-                    <div class="uae_inner">
-                        <!-- Text Header -->
-                        <div class="uae-header">
-                            <h2 class="section-title">We work across the UAE</h2>
-                            <p class="uae-subtitle">Dubai &bull; Abu Dhabi &bull; Sharjah &bull; Ajman &bull; Ras Al
-                                Khaimah
-                                &bull; Fujairah</p>
-                        </div>
 
-                        <!-- Left Column Card -->
-                        <div class="uae-card-wrapper">
-                            <div class="company-card">
-                                <h3 class="company-card__title">Company Details</h3>
-                                <div class="company-card__list">
-                                    <div class="company-card__item">
-                                        <strong class="company-card__key">Company:</strong>
-                                        <span class="company-card__value">Danket Plus</span>
-                                    </div>
-                                    <div class="company-card__item">
-                                        <strong class="company-card__key">Registered in:</strong>
-                                        <span class="company-card__value">Dubai, UAE</span>
-                                    </div>
-                                    <div class="company-card__item">
-                                        <strong class="company-card__key">Services:</strong>
-                                        <span class="company-card__value">Polyurea Waterproofing | SPF Insulation |
-                                            Protective <br> Coatings</span>
-                                    </div>
-                                    <div class="company-card__item">
-                                        <strong class="company-card__key">Coverage:</strong>
-                                        <span class="company-card__value">Dubai and wider UAE</span>
-                                    </div>
-                                    <div class="company-card__item">
-                                        <strong class="company-card__key">Experience:</strong>
-                                        <span class="company-card__value">10+ years in waterproofing and thermal
-                                            insulation
-                                            <br> projects</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Right Column Map -->
-                    <div class="uae-map-wrapper">
-                        <img src="assets/images/map.webp" alt="We work across the UAE map" class="uae-map-image"
-                            width="575" height="435" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Footer -->
         <footer class="footer">
@@ -483,10 +983,10 @@
                 <!-- Footer Orange CTA Card -->
                 <div class="footer-cta">
                     <div class="footer-cta__content">
-                        <h2 class="footer-cta__title footer-cta__title--desktop">Ready to discuss your project?</h2>
+                        <h2 class="footer-cta__title footer-cta__title--desktop">Tell us about your project</h2>
                         <h2 class="footer-cta__title footer-cta__title--mobile">Tell us about your project</h2>
-                        <p class="footer-cta__description">Send us drawings, a BOQ or a project description. We will
-                            review the scope and get back to you.</p>
+                        <p class="footer-cta__description">Describe the building type, surface condition and scope. We
+                            will review it and discuss the right solution and next steps.</p>
                     </div>
                     <div class="footer-cta__actions">
                         <a href="#contact" class="footer-cta__btn">
@@ -596,7 +1096,7 @@
         </footer>
     </div>
 
-    <!-- Inline script for mobile menu toggling (PageSpeed optimized, zero request overhead) -->
+    <script src="assets/vendor/swiper-bundle.min.js" defer></script>
     <script src="assets/js/script.js" defer></script>
 </body>
 

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Danket Plus - Modern solutions and professional project design. Group of companies.">
+    <title>Danket Plus</title>
+    <!-- Responsive Preload for LCP Hero Background Images -->
+    <link rel="preload" href="assets/images/hero_bg-mobile.webp" as="image" type="image/webp"
+        media="(max-width: 480px)">
+    <link rel="preload" href="assets/images/hero_bg.webp" as="image" type="image/webp" media="(min-width: 481px)">
+    <!-- Self-hosted fonts: preloaded so the first paint already has them.
+         Only the two faces used above the fold are preloaded. -->
+    <link rel="preload" href="assets/fonts/golos-text.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/titillium-web-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<style>
+    .hero__card {
+        background: url('assets/images/hero_bg.webp');
+    }
+
+    @media screen and (max-width: 480px) {
+        .hero__card {
+            background: url('assets/images/hero_bg-mobile.webp');
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <!-- Sticky Header -->
+        <header class="header">
+            <div class="container header__container">
+                <a href="#" class="logo" aria-label="Danket Plus Home">
+                    <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
+                    <span class="logo__subtext">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="117" height="7" viewBox="0 0 117 7" fill="none">
+                            <path d="M0 6.90212V1.5338H3.38183V2.16266H0.722481V6.90212H0Z" fill="black" />
+                            <path
+                                d="M6.83721 6.90212V1.5338H8.68184C9.15837 1.5338 9.54779 1.60538 9.8501 1.74854C10.1575 1.88658 10.3856 2.08086 10.5342 2.33138C10.6828 2.57679 10.757 2.86055 10.757 3.18264C10.757 3.49963 10.6828 3.78338 10.5342 4.03391C10.3856 4.28443 10.1575 4.48127 9.8501 4.62442C9.54779 4.76246 9.15837 4.83148 8.68184 4.83148H7.55969V6.90212H6.83721ZM7.55969 4.20262H8.64341C9.15581 4.20262 9.51448 4.1106 9.71944 3.92654C9.92953 3.74248 10.0346 3.49452 10.0346 3.18264C10.0346 2.87077 9.92953 2.62281 9.71944 2.43875C9.51448 2.25469 9.15581 2.16266 8.64341 2.16266H7.55969V4.20262Z"
+                                fill="black" />
+                            <path
+                                d="M15.142 6.97881C15.0856 6.97881 15.0292 6.97625 14.9729 6.97114C14.9216 6.97114 14.8755 6.96859 14.8345 6.96347V6.31928C14.8755 6.32439 14.9216 6.3295 14.9729 6.33461C15.0292 6.33461 15.0856 6.33461 15.142 6.33461C15.2905 6.33461 15.4084 6.31672 15.4955 6.28093C15.5877 6.24514 15.6672 6.18123 15.7338 6.0892C15.8004 5.99718 15.8696 5.86425 15.9413 5.69042L13.72 1.5338H14.504L16.3025 4.94652L17.8244 1.5338H18.5622L16.6023 5.85146C16.5152 6.04575 16.4255 6.21447 16.3333 6.35762C16.241 6.50078 16.1386 6.61837 16.0258 6.7104C15.9131 6.80242 15.785 6.86889 15.6415 6.90979C15.4981 6.9558 15.3315 6.97881 15.142 6.97881Z"
+                                fill="black" />
+                            <path d="M22.0203 6.90212V1.5338H26.2476V6.90212H25.5251V2.16266H22.7428V6.90212H22.0203Z"
+                                fill="black" />
+                            <path d="M30.3211 6.90212V1.5338H34.5484V6.90212H33.8259V2.16266H31.0436V6.90212H30.3211Z"
+                                fill="black" />
+                            <path
+                                d="M38.0071 6.90212L40.0669 1.5338H40.7894L42.8493 6.90212H42.0653L41.5503 5.56771H39.2753L38.7603 6.90212H38.0071ZM39.5135 4.93885H41.3121L40.4128 2.45409L39.5135 4.93885Z"
+                                fill="black" />
+                            <path
+                                d="M53.8396 6.90212V1.5338H54.5621V3.84218H55.1769L57.2829 1.5338H58.1437L55.7918 4.09526L58.2206 6.90212H57.2983L55.1769 4.44036H54.5621V6.90212H53.8396Z"
+                                fill="black" />
+                            <path
+                                d="M63.6827 6.97881C63.3753 6.97881 63.0781 6.92768 62.7912 6.82543C62.5093 6.71806 62.2557 6.55446 62.0302 6.33461C61.8048 6.11477 61.6255 5.83357 61.4922 5.49102C61.3641 5.14847 61.3001 4.7369 61.3001 4.25631V4.10293C61.3001 3.64279 61.3641 3.24655 61.4922 2.91423C61.6255 2.5819 61.8048 2.30838 62.0302 2.09364C62.2557 1.8738 62.5093 1.71275 62.7912 1.61049C63.0781 1.50824 63.3753 1.45711 63.6827 1.45711C63.9902 1.45711 64.2848 1.50824 64.5666 1.61049C64.8536 1.71275 65.1098 1.8738 65.3352 2.09364C65.5607 2.30838 65.7374 2.5819 65.8655 2.91423C65.9988 3.24655 66.0654 3.64279 66.0654 4.10293V4.25631C66.0654 4.7369 65.9988 5.14847 65.8655 5.49102C65.7374 5.83357 65.5607 6.11477 65.3352 6.33461C65.1098 6.55446 64.8536 6.71806 64.5666 6.82543C64.2848 6.92768 63.9902 6.97881 63.6827 6.97881ZM63.6827 6.33461C63.9645 6.33461 64.2259 6.26559 64.4667 6.12755C64.7126 5.98951 64.9125 5.76711 65.0662 5.46034C65.2199 5.15358 65.2968 4.75224 65.2968 4.25631V4.10293C65.2968 3.63256 65.2199 3.25167 65.0662 2.96024C64.9125 2.66371 64.7126 2.44642 64.4667 2.30838C64.2259 2.17033 63.9645 2.10131 63.6827 2.10131C63.406 2.10131 63.1447 2.17033 62.8988 2.30838C62.6528 2.44642 62.453 2.66371 62.2993 2.96024C62.1455 3.25167 62.0687 3.63256 62.0687 4.10293V4.25631C62.0687 4.75224 62.1455 5.15358 62.2993 5.46034C62.453 5.76711 62.6528 5.98951 62.8988 6.12755C63.1447 6.26559 63.406 6.33461 63.6827 6.33461Z"
+                                fill="black" />
+                            <path
+                                d="M69.8333 6.90212V1.5338H70.5865L72.385 4.94652L74.1836 1.5338H74.906V6.90212H74.1836V2.83754L72.6387 5.75177H72.1007L70.5558 2.83754V6.90212H69.8333Z"
+                                fill="black" />
+                            <path d="M78.9823 6.90212V1.5338H83.2096V6.90212H82.4871V2.16266H79.7048V6.90212H78.9823Z"
+                                fill="black" />
+                            <path
+                                d="M86.6683 6.90212L88.7281 1.5338H89.4506L91.5104 6.90212H90.7265L90.2115 5.56771H87.9365L87.4215 6.90212H86.6683ZM88.1747 4.93885H89.9732L89.074 2.45409L88.1747 4.93885Z"
+                                fill="black" />
+                            <path
+                                d="M94.9685 6.90212V1.5338H95.691V3.82684H98.5502V1.5338H99.2727V6.90212H98.5502V4.4557H95.691V6.90212H94.9685Z"
+                                fill="black" />
+                            <path
+                                d="M103.344 6.90212V1.5338H104.067V5.75177L106.926 1.5338H107.649V6.90212H106.926V2.68416L104.067 6.90212H103.344Z"
+                                fill="black" />
+                            <path
+                                d="M111.72 6.90212V1.5338H112.443V5.75177L115.302 1.5338H116.024V6.90212H115.302V2.68416L112.443 6.90212H111.72ZM113.872 1.15035C113.585 1.15035 113.345 1.1069 113.15 1.01998C112.955 0.933064 112.809 0.805247 112.712 0.636529C112.614 0.462698 112.566 0.250522 112.566 0H113.242C113.242 0.235183 113.296 0.403902 113.404 0.506155C113.511 0.608409 113.667 0.659536 113.872 0.659536C114.082 0.659536 114.241 0.608409 114.349 0.506155C114.462 0.403902 114.518 0.235183 114.518 0H115.179C115.179 0.250522 115.13 0.462698 115.033 0.636529C114.936 0.805247 114.79 0.933064 114.595 1.01998C114.405 1.1069 114.164 1.15035 113.872 1.15035Z"
+                                fill="black" />
+                        </svg>
+                    </span>
+                </a>
+
+                <nav class="header__nav" aria-label="Main Navigation">
+                    <ul class="header__nav-list">
+                        <li><a href="#services" class="header__nav-link">Services</a></li>
+                        <li><a href="#applications" class="header__nav-link">Applications</a></li>
+                        <li><a href="#process" class="header__nav-link">Process</a></li>
+                        <li><a href="#projects" class="header__nav-link">Projects</a></li>
+                        <li><a href="#contacts" class="header__nav-link">Contacts</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Actions -->
+                <div class="header__actions">
+                    <a href="https://wa.me/971582559902" class="header__whatsapp" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="assets/images/watsapp-icon.svg" alt="WhatsApp Icon" width="20" height="20"
+                            loading="lazy">
+                        <span>+971 58 255 9902</span>
+                    </a>
+                    <a href="#contact" class="btn btn--primary header__cta">Describe Your Project</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="header__burger" id="burgerToggle" aria-label="Open Menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <img src="assets/images/burger-icon.svg" alt="Menu Icon" width="24" height="24">
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Menu Overlay -->
+            <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true"
+                aria-label="Mobile Navigation Menu">
+                <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+                <div class="mobile-menu__content">
+                    <div class="mobile-menu__header">
+                        <a href="#" class="logo" aria-label="Danket Plus Home">
+                            <img src="assets/images/logo.svg" alt="Danket Plus Logo" width="161" height="38">
+                            <span class="logo__subtext">ГРУППА КОМПАНИЙ</span>
+                        </a>
+                        <button class="mobile-menu__close" id="menuClose" aria-label="Close Menu">&times;</button>
+                    </div>
+                    <nav class="mobile-menu__nav" aria-label="Mobile Navigation Links">
+                        <ul class="mobile-menu__list">
+                            <li><a href="#services" class="mobile-menu__link">Services</a></li>
+                            <li><a href="#applications" class="mobile-menu__link">Applications</a></li>
+                            <li><a href="#process" class="mobile-menu__link">Process</a></li>
+                            <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+                            <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu__actions">
+                        <a href="https://wa.me/971582559902" class="mobile-menu__whatsapp" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="assets/images/watsapp-icon.svg" alt="WhatsApp Icon" width="20" height="20">
+                            <span>+971 58 255 9902</span>
+                        </a>
+                        <a href="#contact" class="btn btn--primary mobile-menu__cta">Describe Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="hero_inner">
+                    <div class="hero__card" style="">
+                        <div class="hero__content">
+                            <!-- Breadcrumbs -->
+                            <div class="breadcrumbs">
+                                <a href="#" class="breadcrumbs__link">Home</a>
+                                <span class="breadcrumbs__separator"></span>
+                                <span class="breadcrumbs__current">Сontacts</span>
+                            </div>
+
+                            <div class="block__inner">
+                                <div class="title-block">
+                                    <h1 class="hero__title hero__title--desktop">Get in Touch — Waterproofing &
+                                        Insulation
+                                        in Dubai</h1>
+                                    <h1 class="hero__title hero__title--mobile">Completed Projects — Waterproofing &
+                                        Insulation in Dubai</h1>
+
+                                    <!-- Hero Description -->
+                                    <p class="hero__text hero__text--desktop">
+                                        Describe your project and we will review it and discuss the next steps. We work
+                                        across Dubai and the wider UAE — commercial, industrial and residential.
+                                    </p>
+                                    <p class="hero__text hero__text--tablet">
+                                        Spray polyurethane foam reduces overheating of structures and indoor spaces,
+                                        stabilising internal temperatures and lowering the load on air conditioning
+                                        systems.
+                                    </p>
+                                </div>
+                                <!-- Hero CTA Actions -->
+                                <div class="hero__actions">
+                                    <a href="#contact" class="btn btn--accent">Describe Your Project</a>
+                                    <a href="#services" class="btn btn--outline">View Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Contact Info Cards -->
+                    <div class="contact-sidebar">
+                        <div class="contact-card">
+                            <span class="contact-card__label">WhatsApp / Phone:</span>
+                            <a href="https://wa.me/971582559902"
+                                class="contact-card__value contact-card__value--highlight">+971 58 255 9902</a>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-card__label">Email:</span>
+                            <a href="mailto:INFO@DANKETPLUS.RU"
+                                class="contact-card__value contact-card__value--highlight">INFO@DANKETPLUS.RU</a>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-card__label">Office Hours:</span>
+                            <span class="contact-card__value">THU, 8 AM–6 PM GST</span>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-card__label">Location:</span>
+                            <span class="contact-card__value">DUBAI, UAE</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form Card -->
+                    <form class="contact-form-card" id="projectContactForm" method="POST" action="#">
+                        <h2 class="contact-form-card__title">CONTACT FORM</h2>
+                        <div class="contact-form-card__divider"></div>
+
+                        <div class="contact-form-card__grid">
+                            <div class="contact-form-card_row">
+                                <!-- Name -->
+                                <div class="form-group grid-name">
+                                    <label class="form-label" for="formName">Name <span
+                                            class="required-star">*</span></label>
+                                    <input type="text" id="formName" name="name" required class="form-input">
+                                </div>
+
+                                <!-- Company -->
+                                <div class="form-group grid-company">
+                                    <label class="form-label" for="formCompany">Company</label>
+                                    <input type="text" id="formCompany" name="company" class="form-input">
+                                </div>
+
+                                <!-- Phone / WhatsApp -->
+                                <div class="form-group grid-phone">
+                                    <label class="form-label" for="formPhone">Phone / WhatsApp <span
+                                            class="required-star">*</span></label>
+                                    <input type="tel" id="formPhone" name="phone" required class="form-input">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group grid-email">
+                                    <label class="form-label" for="formEmail">Email</label>
+                                    <input type="email" id="formEmail" name="email" class="form-input">
+                                </div>
+
+                                <!-- Service needed -->
+                                <div class="form-group grid-service">
+                                    <label class="form-label" for="formService">Service needed</label>
+                                    <div class="select-wrapper">
+                                        <select id="formService" name="service">
+                                            <option value="Polyurea Waterproofing">Polyurea Waterproofing</option>
+                                            <option value="PU Foam Insulation">PU Foam Insulation</option>
+                                            <option value="Other Waterproofing">Other Waterproofing</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Project description -->
+                            <div class="form-group grid-desc">
+                                <label class="form-label" for="formDesc">Project description</label>
+                                <textarea id="formDesc" name="description" class="form-textarea"
+                                    placeholder="Building type, approximate area, what is happ..."></textarea>
+                            </div>
+
+                            <!-- File upload -->
+                            <div class="form-group grid-file">
+                                <label class="form-label" for="projectFiles">Project documents / Drawings / BOQ</label>
+                                <div class="file-upload" id="fileUploadContainer" role="button" tabindex="0">
+                                    <input type="file" id="projectFiles" name="documents" class="file-input-hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_3001_6228)">
+                                            <path
+                                                d="M19.1251 8.00001C18.9689 7.84379 18.7569 7.75602 18.536 7.75602C18.315 7.75602 18.1031 7.84379 17.9468 8.00001L8.87014 17.1158C8.48323 17.5028 8.0239 17.8098 7.51836 18.0192C7.01282 18.2287 6.47098 18.3365 5.92377 18.3365C4.81863 18.3366 3.75873 17.8977 2.97722 17.1163C2.19572 16.3349 1.75663 15.275 1.75655 14.1699C1.75648 13.0648 2.19541 12.0049 2.97681 11.2233L11.7676 2.39668C12.2377 1.93409 12.8715 1.67599 13.531 1.67859C14.1906 1.6812 14.8223 1.94431 15.2887 2.4106C15.7551 2.87689 16.0184 3.50859 16.0211 4.1681C16.0239 4.82761 15.766 5.4615 15.3035 5.93168L6.51264 14.7583C6.3541 14.9102 6.14303 14.995 5.92347 14.995C5.70392 14.995 5.49285 14.9102 5.33431 14.7583C5.17808 14.6021 5.09032 14.3901 5.09032 14.1692C5.09032 13.9482 5.17808 13.7363 5.33431 13.58L13.161 5.71751C13.3128 5.56034 13.3968 5.34984 13.3949 5.13134C13.393 4.91285 13.3053 4.70384 13.1508 4.54933C12.9963 4.39482 12.7873 4.30718 12.5688 4.30528C12.3503 4.30339 12.1398 4.38738 11.9826 4.53918L4.15597 12.4017C3.92378 12.6338 3.7396 12.9094 3.61393 13.2128C3.48827 13.5161 3.42359 13.8413 3.42359 14.1696C3.42359 14.4979 3.48827 14.8231 3.61393 15.1264C3.7396 15.4297 3.92378 15.7054 4.15597 15.9375C4.63232 16.3921 5.26546 16.6457 5.92389 16.6457C6.58232 16.6457 7.21546 16.3921 7.69181 15.9375L16.4818 7.11001C17.2468 6.32527 17.6718 5.27072 17.6648 4.17482C17.6578 3.07892 17.2193 2.02991 16.4443 1.25503C15.6693 0.480152 14.6202 0.0417996 13.5243 0.034933C12.4284 0.0280663 11.3739 0.453238 10.5893 1.21835L1.79847 10.045C0.704457 11.139 0.0898437 12.6228 0.0898438 14.17C0.0898438 15.7172 0.704457 17.201 1.79847 18.295C2.89249 19.389 4.3763 20.0036 5.92347 20.0036C7.47065 20.0036 8.95446 19.389 10.0485 18.295L19.1251 9.18168C19.203 9.10424 19.2648 9.01218 19.3069 8.91078C19.3491 8.80938 19.3708 8.70066 19.3708 8.59085C19.3708 8.48103 19.3491 8.37231 19.3069 8.27091C19.2648 8.16952 19.203 8.07745 19.1251 8.00001Z"
+                                                fill="#525A6B" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_3001_6228">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span id="fileLabelText" class="file-upload__text">Click to download the file</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-card__footer">
+                            <label class="form-agreement">
+                                <input type="checkbox" name="agreement" required class="form-agreement__checkbox">
+                                <span class="form-agreement__text">
+                                    I agree with the <a href="#" class="form-agreement__link">privacy policy</a> and
+                                    consent to the processing of <a href="#" class="form-agreement__link">personal
+                                        data</a>
+                                </span>
+                            </label>
+                            <button type="submit" class="btn btn--primary form-submit-btn">Describe Your
+                                Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Section -->
+        <section class="whatsapp-section">
+            <div class="container">
+                <div class="whatsapp-card">
+                    <div class="whatsapp-card__content">
+                        <h2 class="whatsapp-card__title">WhatsApp — fastest way to reach us</h2>
+                        <div class="whatsapp-card__subtitle">
+                            Send us a message on WhatsApp: <a href="https://wa.me/971582559902"
+                                class="whatsapp-card__link" target="_blank">+971 58 255 9902</a>
+                        </div>
+                        <p class="whatsapp-card__text">
+                            Tell us about the building, surface condition and scope. We will respond quickly and arrange
+                            a call or site visit.
+                        </p>
+                        <a href="https://wa.me/971582559902" class="whatsapp-card__btn" target="_blank">Open
+                            WhatsApp</a>
+                    </div>
+                    <div class="whatsapp-card__image-wrapper">
+                        <img src="assets/images/watsappTelephone-img.webp" alt="WhatsApp Chat Mockup"
+                            class="whatsapp-card__image" width="319" height="364" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discuss Section -->
+        <section class="discuss-section">
+            <div class="container">
+                <div class="discuss-grid">
+                    <!-- Left: List -->
+                    <div class="discuss-content">
+                        <h2 class="discuss-title">What you can discuss with us</h2>
+                        <ul class="discuss-list">
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Subcontracting enquiries and tender opportunities — for
+                                    general and roofing contractors</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Waterproofing and insulation scope for commercial,
+                                    industrial and residential projects</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Foundation and basement waterproofing — new-build and
+                                    retrofit</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Roof insulation and waterproofing — SPF, polyurea or
+                                    combined system</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Swimming pool waterproofing</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Site inspection and system recommendation</span>
+                            </li>
+                            <li class="discuss-item">
+                                <img src="assets/images/discuss_icon.svg" alt="bullet" class="discuss-item__icon"
+                                    width="18" height="18" loading="lazy">
+                                <span class="discuss-item__text">Technical review of drawings or BOQ</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Image -->
+                    <div class="discuss-image-wrapper">
+                        <img src="assets/images/discuss_img.webp" alt="Dubai roof waterproofing discuss"
+                            class="discuss-image" width="511" height="435" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Enquiries Section -->
+        <section class="steps-section">
+            <div class="container">
+                <h2 class="section-title">How we handle enquiries</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-circle">01</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Review</h3>
+                            <p class="step-description">We review your project details or documents.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">02</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Site visit</h3>
+                            <p class="step-description">We arrange an inspection or review drawings and photos.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">03</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Recommendation</h3>
+                            <p class="step-description">System recommendation tailored to the structure and UAE
+                                conditions.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">04</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Quotation</h3>
+                            <p class="step-description">Fixed quote with scope, timeline and materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- UAE Section -->
+        <section class="uae-section">
+            <div class="container">
+                <div class="uae-grid">
+                    <div class="uae_inner">
+                        <!-- Text Header -->
+                        <div class="uae-header">
+                            <h2 class="section-title">We work across the UAE</h2>
+                            <p class="uae-subtitle">Dubai &bull; Abu Dhabi &bull; Sharjah &bull; Ajman &bull; Ras Al
+                                Khaimah
+                                &bull; Fujairah</p>
+                        </div>
+
+                        <!-- Left Column Card -->
+                        <div class="uae-card-wrapper">
+                            <div class="company-card">
+                                <h3 class="company-card__title">Company Details</h3>
+                                <div class="company-card__list">
+                                    <div class="company-card__item">
+                                        <strong class="company-card__key">Company:</strong>
+                                        <span class="company-card__value">Danket Plus</span>
+                                    </div>
+                                    <div class="company-card__item">
+                                        <strong class="company-card__key">Registered in:</strong>
+                                        <span class="company-card__value">Dubai, UAE</span>
+                                    </div>
+                                    <div class="company-card__item">
+                                        <strong class="company-card__key">Services:</strong>
+                                        <span class="company-card__value">Polyurea Waterproofing | SPF Insulation |
+                                            Protective <br> Coatings</span>
+                                    </div>
+                                    <div class="company-card__item">
+                                        <strong class="company-card__key">Coverage:</strong>
+                                        <span class="company-card__value">Dubai and wider UAE</span>
+                                    </div>
+                                    <div class="company-card__item">
+                                        <strong class="company-card__key">Experience:</strong>
+                                        <span class="company-card__value">10+ years in waterproofing and thermal
+                                            insulation
+                                            <br> projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Map -->
+                    <div class="uae-map-wrapper">
+                        <img src="assets/images/map.webp" alt="We work across the UAE map" class="uae-map-image"
+                            width="575" height="435" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <!-- Footer Orange CTA Card -->
+                <div class="footer-cta">
+                    <div class="footer-cta__content">
+                        <h2 class="footer-cta__title footer-cta__title--desktop">Ready to discuss your project?</h2>
+                        <h2 class="footer-cta__title footer-cta__title--mobile">Tell us about your project</h2>
+                        <p class="footer-cta__description">Send us drawings, a BOQ or a project description. We will
+                            review the scope and get back to you.</p>
+                    </div>
+                    <div class="footer-cta__actions">
+                        <a href="#contact" class="footer-cta__btn">
+                            <span class="footer-cta__btn-text footer-cta__btn-text--desktop">Fill in the Contact
+                                Form</span>
+                            <span class="footer-cta__btn-text footer-cta__btn-text--mobile">Describe Your Project</span>
+                            <span class="footer-cta__btn-icon">
+                                <img src="assets/images/arrow-up-right.svg" alt="arrow-up-right.svg" width="60"
+                                    height="60" loading="lazy">
+                            </span>
+                        </a>
+                        <a href="https://wa.me/971582559902" class="footer-cta__btn" target="_blank">
+                            <span class="footer-cta__btn-text footer-cta__btn-text--green">+971 58 255 9902</span>
+                            <span class="footer-cta__btn-icon">
+                                <img src="assets/images/footer_watsapp.webp" alt="WhatsApp"
+                                    class="footer-cta__whatsapp-icon" width="60" height="60" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Columns -->
+                <div class="footer-grid">
+                    <!-- Info Column -->
+                    <div class="footer-col footer-col--info">
+                        <p class="footer-info-text">Polyurea waterproofing and SPF insulation solutions for commercial,
+                            industrial and residential projects across Dubai and the UAE.</p>
+                        <div class="footer-copyright">
+                            <span>&copy; 2009-2026 DANKETPLUS</span>
+                            <div class="footer-legal-links">
+                                <a href="#" class="footer-link">Privacy Policy</a>
+                                <a href="#" class="footer-link">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Column -->
+                    <div class="footer-col footer-col--services">
+                        <h4 class="footer-col-title">Services</h4>
+                        <ul class="footer-col-list">
+                            <li><a href="#" class="footer-link">SPF Insulation</a></li>
+                            <li><a href="#" class="footer-link">Polyurea Waterproofing</a></li>
+                            <li><a href="#" class="footer-link">SPF + Polyurea System</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Column -->
+                    <div class="footer-col footer-col--company">
+                        <h4 class="footer-col-title">Company</h4>
+                        <ul class="footer-col-list">
+                            <li><a href="#" class="footer-link">Projects</a></li>
+                            <li><a href="#" class="footer-link">Why Choose Us</a></li>
+                            <li><a href="#" class="footer-link">How We Work</a></li>
+                            <li><a href="#" class="footer-link">Contacts</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts Card Column -->
+                    <div class="footer-col footer-col--contacts">
+                        <div class="footer-contacts-card">
+                            <ul class="footer-contacts-list">
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">WhatsApp / Phone:</span>
+                                    </div>
+                                    <div class="footer-contacts-content">
+                                        <a href="https://wa.me/971582559902" class="footer-contacts-value"
+                                            target="_blank">+971 58 255 9902</a>
+
+                                    </div>
+                                </li>
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">Email:</span>
+                                    </div>
+
+                                    <div class="footer-contacts-content">
+                                        <a href="mailto:info@danketplus.ru"
+                                            class="footer-contacts-value">info@danketplus.ru</a>
+                                    </div>
+                                </li>
+                                <li class="footer-contacts-item">
+                                    <div class="bullet-block">
+                                        <span class="footer-contacts-bullet"></span>
+                                        <span class="footer-contacts-label">Instagram:</span>
+                                    </div>
+                                    <div class="footer-contacts-content">
+                                        <a href="https://instagram.com/danketplus.ae" class="footer-contacts-value"
+                                            target="_blank">@danketplus.ae</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Translucent Giant Logo Background -->
+                <div class="footer-bg-logo">
+                    <img src="assets/images/footer-logo1.svg" alt="DANKET" class="footer-bg-logo__text" width="982"
+                        height="184" loading="lazy">
+                    <img src="assets/images/footer-logo2.svg" alt="+" class="footer-bg-logo__plus" width="191"
+                        height="184" loading="lazy">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Inline script for mobile menu toggling (PageSpeed optimized, zero request overhead) -->
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
