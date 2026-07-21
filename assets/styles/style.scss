@@ -3271,6 +3271,8 @@ body {
         font-weight: 400;
         line-height: 130%;
         margin: 0;
+        margin-bottom: 16px;
+
 
         strong {
             font-weight: 600;
@@ -3337,7 +3339,8 @@ body {
     &__footer {
         color: var(--txt-primary, #2D323B);
         font-family: $font-primary;
-        font-size: 16px;
+        font-size: 18px;
+        font-style: normal;
         font-weight: 400;
         line-height: 130%;
         margin: 16px 0 0 0;
@@ -3345,11 +3348,13 @@ body {
         border-top: 1px solid #DBDEE4;
 
         strong {
-            font-weight: 600;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
-            font-size: 14px;
+            font-size: 16px;
+            padding-top: 8px;
+            margin-top: 8px;
         }
     }
 
@@ -3364,6 +3369,28 @@ body {
 
             @media (max-width: 480px) {
                 height: 169px;
+            }
+        }
+
+        // These sit side by side, so their horizontal rules have to line up.
+        // Titles run to either one or two lines; reserving two keeps the rule
+        // under the title — and the copy beneath it — level across the row.
+        // Only needed above 950px, below that the grid is a single column.
+        @media (min-width: 951px) {
+            .apply-card__title {
+                min-height: calc(24px * 1.1 * 2); // two lines at the desktop type size
+                box-sizing: content-box;
+            }
+
+            // Body copy can still differ in length, so anchor the closing block
+            // to the bottom of the card instead of to the end of the text.
+            // Its own text runs to one or two lines, so reserve two there as
+            // well — otherwise the block is bottom-aligned but its top rule
+            // still sits a line apart between the two cards.
+            .apply-card__footer {
+                margin-top: auto;
+                min-height: calc(18px * 1.3 * 2); // two lines at the desktop type size
+                box-sizing: content-box;
             }
         }
     }
@@ -3407,13 +3434,22 @@ body {
             justify-content: center;
         }
 
-        // below tablet the copy drops out of the image and stacks beneath it
+        // On mobile the copy stays floated over the image, as in the design.
+        // The image grows tall enough to sit behind it and the panel is
+        // anchored to the bottom rather than stretched top-to-bottom.
         @media (max-width: 768px) {
+            .apply-card__media {
+                height: 500px;
+            }
+
             .apply-card__info {
-                position: static;
+                top: auto;
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
                 width: auto;
                 max-width: none;
-                border-radius: 0;
+                border-radius: 12px;
                 padding: 16px;
             }
         }
@@ -4291,9 +4327,9 @@ body {
 
     @media (max-width: 768px) {
         flex-direction: column;
-        border-radius: 16px;
-        padding: 8px;
-        gap: 8px;
+        border-radius: 20px;
+        padding: 4px;
+        gap: 4px;
     }
 }
 
@@ -4326,6 +4362,10 @@ body {
     letter-spacing: 0.24px;
     text-transform: uppercase;
     margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 12px;
+    }
 }
 
 .lp-card__dot {
@@ -4395,6 +4435,10 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    }
 }
 
 .lp-card__metric-value {
@@ -4407,7 +4451,8 @@ body {
     letter-spacing: -0.24px;
 
     @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 20px;
+        letter-spacing: -0.2px;
     }
 }
 
@@ -4546,16 +4591,19 @@ body {
 
     .swiper-pagination-bullet {
         width: 24px;
-        height: 3px;
+        height: 4px;
         margin: 0;
-        border-radius: 2px;
-        background: #D3D7DE;
-        opacity: 1;
+        opacity: 0.3;
+        background: #2D323B;
         transition: background-color 0.2s ease;
+        border-radius: 0;
     }
 
     .swiper-pagination-bullet-active {
-        background: var(--txt-primary, #2D323B);
+        width: 50px;
+        height: 5px;
+        background: #2D323B;
+        opacity: 1;
     }
 }
 
@@ -4693,25 +4741,41 @@ body {
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-// Hover previews the open state; is-open holds it
+// The open state itself — applies on every device.
 .faq-item.is-open .faq-item__icon,
-.faq-item__head:hover .faq-item__icon,
 .faq-item__head:focus-visible .faq-item__icon {
     background: #739EC9;
 }
 
 .faq-item.is-open .faq-item__icon-plus,
-.faq-item__head:hover .faq-item__icon-plus,
 .faq-item__head:focus-visible .faq-item__icon-plus {
     opacity: 0;
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .faq-item.is-open .faq-item__icon-close,
-.faq-item__head:hover .faq-item__icon-close,
 .faq-item__head:focus-visible .faq-item__icon-close {
     opacity: 1;
     transform: translate(-50%, -50%) rotate(0deg);
+}
+
+// Hover previews the open state, but only where there is a real pointer.
+// Touch browsers keep :hover stuck on the last tapped element, which would
+// leave the icon blue after the item has been closed again.
+@media (hover: hover) and (pointer: fine) {
+    .faq-item__head:hover .faq-item__icon {
+        background: #739EC9;
+    }
+
+    .faq-item__head:hover .faq-item__icon-plus {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .faq-item__head:hover .faq-item__icon-close {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
 }
 
 .faq-item__question {
@@ -4783,17 +4847,18 @@ body {
 .solutions {
     margin-bottom: 100px;
     background-color: #739EC9;
-    padding: 100px 0 0; // no bottom padding — the building image sits flush
+    padding: 100px 0; // no bottom padding — the building image sits flush
     overflow: hidden; // clips the image bleed
     position: relative;
 
     @media (max-width: 1024px) {
-        padding-top: 80px;
+        padding: 80px 0;
         margin-bottom: 80px;
     }
 
     @media (max-width: 480px) {
         padding-top: 60px;
+        padding-bottom: 251px;
         margin-bottom: 60px;
     }
 
@@ -4913,14 +4978,13 @@ body {
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 0;
         margin-top: 60px;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        padding-bottom: 60px;
 
         @media (max-width: 768px) {
             padding-bottom: 0;
@@ -4965,7 +5029,7 @@ body {
         line-height: 130%;
         margin: 0 0 16px 0;
 
-        &:last-of-type{
+        &:last-of-type {
             margin-bottom: 0;
         }
 
@@ -4979,31 +5043,41 @@ body {
     }
 
     &__badge {
+        width: 620px;
         margin-top: 149px;
         align-self: flex-start;
         border-radius: 16px;
         background-color: #F3F4F6;
         padding: 32px;
         box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+
+        // @media (max-width: 1025px) {
+        // }
 
         @media (max-width: 480px) {
+            width: auto;
             padding: 24px;
+            margin-top: 31px;
         }
     }
 
     &__badge-text {
-        color: #739EC9;
-        font-family: $font-secondary;
-        font-size: 20px;
+        color: var(--Dubai-blue, #739EC9);
+        font-family: "Titillium Web";
+        font-size: 24px;
+        font-style: normal;
         font-weight: 600;
-        line-height: 120%;
-        letter-spacing: -0.2px;
+        line-height: 110%;
+        /* 26.4px */
+        letter-spacing: -0.24px;
         text-transform: uppercase;
         margin: 0;
 
         @media (max-width: 480px) {
-            font-size: 18px;
-            letter-spacing: -0.18px;
+            font-size: 19px;
+            letter-spacing: -0.19px;
         }
     }
 
@@ -5013,14 +5087,34 @@ body {
         right: 0;
         bottom: 0;
 
+        // Anchored to .solutions (the section), so this is measured against the
+        // viewport, not the container. The design is drawn at 1440px, where the
+        // image is 975x865 — i.e. 67.7vw. Expressing it that way keeps the exact
+        // design size at 1440px and shrinks it in step with everything else
+        // below that, instead of staying 975px wide and swallowing the copy.
+        width: min(975px, 67.7vw);
+        aspect-ratio: 975 / 865;
+        height: auto;
+
+        // Once the grid stacks there is no side-by-side left to preserve:
+        // the image rejoins the flow and bleeds the full viewport width.
         @media (max-width: 768px) {
-            margin-right: -20px;
-            margin-left: -20px;
+            width: auto;
+            aspect-ratio: auto;
+            bottom: 0;
+            height: 442px;
+            right: -57px;
         }
     }
 
     &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
+
+        // @media (max-width: 768px) {
+        // }
     }
 }
 
@@ -5236,6 +5330,22 @@ body {
     }
 
     .process-title--mobile {
+        display: block;
+    }
+}
+
+// Intro line under the FAQ title. The design only shows it on mobile, where
+// the accordion sits directly below the heading rather than beside it.
+.faq__subtitle {
+    display: none;
+    font-family: $font-primary;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--txt-secondary, #525A6B);
+    margin: -12px 0 20px 0;
+
+    @media (max-width: 768px) {
         display: block;
     }
 }

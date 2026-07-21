@@ -8,21 +8,20 @@
         content="Spray PU foam insulation in Dubai for roofs, villas and warehouses. Seamless polyurethane foam that reduces overheating and lowers air conditioning load.">
     <title>Spray PU Foam Insulation in Dubai — Danket Plus</title>
     <!-- Responsive Preload for LCP Hero Background Images -->
-    <link rel="preload" href="assets/images/pu-foam-insulation_bg-mobile.png" as="image" type="image/png"
+    <link rel="preload" href="assets/images/pu-foam-insulation_bg-mobile.webp" as="image" type="image/webp"
         media="(max-width: 480px)">
-    <link rel="preload" href="assets/images/pu-foam-insulation_bg.png" as="image" type="image/png"
+    <link rel="preload" href="assets/images/pu-foam-insulation_bg.webp" as="image" type="image/webp"
         media="(min-width: 481px)">
-    <!-- Preconnect to Google Fonts for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Asynchronous Google Fonts Loading to prevent render blocking -->
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Self-hosted fonts: preloaded so the first paint already has them.
+         Only the two faces used above the fold are preloaded. -->
+    <link rel="preload" href="assets/fonts/golos-text.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/titillium-web-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <!-- Swiper: the slider is below the fold, so its CSS must not block first paint -->
+    <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" media="print"
+        onload="this.onload=null;this.media='all'">
     <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap"
-            rel="stylesheet">
+        <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css">
     </noscript>
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -30,7 +29,7 @@
 <style>
     .hero__card {
         background: linear-gradient(90deg, #739EC9 47.69%, rgba(115, 158, 201, 0.00) 72.11%),
-            url('assets/images/pu-foam-insulation_bg.png');
+            url('assets/images/pu-foam-insulation_bg.webp');
     }
 
     .hero__content {
@@ -60,7 +59,7 @@
         }
 
         .hero__card {
-            background-image: url('assets/images/pu-foam-insulation_bg-mobile.png');
+            background-image: url('assets/images/pu-foam-insulation_bg-mobile.webp');
         }
     }
 </style>
@@ -311,7 +310,7 @@
                     <!-- Right: Image with badge overlay -->
                     <div class="heat-roof__media">
                         <div class="heat-roof__image-wrapper">
-                            <img src="assets/images/any-roof_img.png"
+                            <img src="assets/images/any-roof_img.webp"
                                 alt="Villa roof under direct Dubai sun, insulated with spray polyurethane foam"
                                 class="heat-roof__image" width="584" height="440" loading="lazy">
                             <div class="heat-roof__badge">
@@ -335,7 +334,7 @@
                     <!-- Featured: image with the copy floated over it -->
                     <div class="apply-card apply-card--overlay">
                         <div class="apply-card__media">
-                            <img src="assets/images/SPF-Insulation_img1.png"
+                            <img src="assets/images/SPF-Insulation_img1.webp"
                                 alt="SPF insulation applied to a commercial flat roof overlooking the Dubai skyline"
                                 class="apply-card__image" width="1200" height="390" loading="lazy">
                         </div>
@@ -365,7 +364,7 @@
                             <p class="apply-card__footer">Applied in <strong>1–3 days</strong> depending on scope.</p>
                         </div>
                         <div class="apply-card__media">
-                            <img src="assets/images/SPF-Insulation_img2.png"
+                            <img src="assets/images/SPF-Insulation_img2.webp"
                                 alt="Villa roof prepared for spray polyurethane foam insulation"
                                 class="apply-card__image" width="584" height="234" loading="lazy">
                         </div>
@@ -385,7 +384,7 @@
                                 suitable conditions.</p>
                         </div>
                         <div class="apply-card__media">
-                            <img src="assets/images/SPF-Insulation_img3.png"
+                            <img src="assets/images/SPF-Insulation_img3.webp"
                                 alt="Warehouse roof structure insulated with spray polyurethane foam"
                                 class="apply-card__image" width="584" height="234" loading="lazy">
                         </div>
@@ -530,7 +529,7 @@
 
                 <div class="solutions__grid">
                     <article class="solution-card">
-                        <img src="assets/images/solutions-used_img1.png"
+                        <img src="assets/images/solutions-used_img1.webp"
                             alt="UV-resistant protective coating applied to an exposed rooftop terrace in Dubai"
                             class="solution-card__image" width="588" height="287" loading="lazy">
                         <h3 class="solution-card__title">UV-resistant protective coatings for all outdoor applications
@@ -538,7 +537,7 @@
                     </article>
 
                     <article class="solution-card">
-                        <img src="assets/images/solutions-used_img2.png"
+                        <img src="assets/images/solutions-used_img2.webp"
                             alt="High-adhesion primer being roller-applied to a prepared substrate"
                             class="solution-card__image" width="588" height="287" loading="lazy">
                         <h3 class="solution-card__title">High-adhesion primers formulated for UAE substrates and
@@ -546,7 +545,7 @@
                     </article>
 
                     <article class="solution-card">
-                        <img src="assets/images/solutions-used_img3.png"
+                        <img src="assets/images/solutions-used_img3.webp"
                             alt="Reinforced detail treatment around a roof drainage outlet"
                             class="solution-card__image" width="588" height="287" loading="lazy">
                         <h3 class="solution-card__title">Reinforced detail treatment in high-load and connection zones
@@ -554,7 +553,7 @@
                     </article>
 
                     <article class="solution-card">
-                        <img src="assets/images/solutions-used_img4.png"
+                        <img src="assets/images/solutions-used_img4.webp"
                             alt="Protective topcoat on a walkway between rooftop plant equipment"
                             class="solution-card__image" width="588" height="287" loading="lazy">
                         <h3 class="solution-card__title">Protective topcoats against mechanical wear and UV degradation
@@ -580,7 +579,7 @@
                     </div>
 
                     <div class="one-system__media">
-                        <img src="assets/images/solutions-used_bg.png"
+                        <img src="assets/images/solutions-used_bg.webp"
                             alt="Modern residential building with a combined SPF and polyurea roof system"
                             class="one-system__image" width="1060" height="1013" loading="lazy">
                     </div>
@@ -734,9 +733,413 @@
             </div>
         </section>
 
+        <!-- Case Studies — Local Projects Section -->
+        <section class="local-projects">
+            <div class="container">
+                <h2 class="section-title local-projects__title">Case studies &mdash; local projects</h2>
+
+                <div class="local-projects__wrap">
+                    <div class="local-projects__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="lp-card">
+                                    <div class="lp-card__info">
+                                        <span class="lp-card__eyebrow">
+                                            <img src="assets/images/red-dot.svg" alt="" class="lp-card__dot" width="8"
+                                                height="8" loading="lazy">
+                                            Dubai Industrial Area
+                                        </span>
+                                        <h3 class="lp-card__title">Warehouse roof</h3>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__metrics">
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Scope: metal roof</span>
+                                                <span class="lp-card__metric-value">2,400 m&sup2;</span>
+                                            </div>
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Timeline:</span>
+                                                <span class="lp-card__metric-value">4 days</span>
+                                            </div>
+                                        </div>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__details">
+                                            <p class="lp-card__row"><strong>Solution:</strong> SPF 80 mm + polyurea
+                                                protective coat</p>
+                                            <p class="lp-card__row"><strong>System installed:</strong> SPF insulation
+                                                and polyurea protective coat installed; project handed over within
+                                                agreed timeline</p>
+                                        </div>
+                                    </div>
+                                    <div class="lp-card__media">
+                                        <img src="assets/images/local-projects_img2.webp"
+                                            alt="Warehouse roof insulation in Dubai Industrial Area"
+                                            class="lp-card__img" width="587" height="368" loading="lazy">
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="lp-card">
+                                    <div class="lp-card__info">
+                                        <span class="lp-card__eyebrow">
+                                            <img src="assets/images/red-dot.svg" alt="" class="lp-card__dot" width="8"
+                                                height="8" loading="lazy">
+                                            Dubai Industrial Area
+                                        </span>
+                                        <h3 class="lp-card__title">Warehouse roof</h3>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__metrics">
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Scope: metal roof</span>
+                                                <span class="lp-card__metric-value">2,400 m&sup2;</span>
+                                            </div>
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Timeline:</span>
+                                                <span class="lp-card__metric-value">4 days</span>
+                                            </div>
+                                        </div>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__details">
+                                            <p class="lp-card__row"><strong>Solution:</strong> SPF 80 mm + polyurea
+                                                protective coat</p>
+                                            <p class="lp-card__row"><strong>System installed:</strong> SPF insulation
+                                                and polyurea protective coat installed; project handed over within
+                                                agreed timeline</p>
+                                        </div>
+                                    </div>
+                                    <div class="lp-card__media">
+                                        <img src="assets/images/local-projects_img2.webp"
+                                            alt="Warehouse roof insulation in Dubai Industrial Area"
+                                            class="lp-card__img" width="587" height="368" loading="lazy">
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="lp-card">
+                                    <div class="lp-card__info">
+                                        <span class="lp-card__eyebrow">
+                                            <img src="assets/images/red-dot.svg" alt="" class="lp-card__dot" width="8"
+                                                height="8" loading="lazy">
+                                            Dubai Industrial Area
+                                        </span>
+                                        <h3 class="lp-card__title">Warehouse roof</h3>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__metrics">
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Scope: metal roof</span>
+                                                <span class="lp-card__metric-value">2,400 m&sup2;</span>
+                                            </div>
+                                            <div class="lp-card__metric">
+                                                <span class="lp-card__metric-label">Timeline:</span>
+                                                <span class="lp-card__metric-value">4 days</span>
+                                            </div>
+                                        </div>
+                                        <div class="lp-card__divider"></div>
+                                        <div class="lp-card__details">
+                                            <p class="lp-card__row"><strong>Solution:</strong> SPF 80 mm + polyurea
+                                                protective coat</p>
+                                            <p class="lp-card__row"><strong>System installed:</strong> SPF insulation
+                                                and polyurea protective coat installed; project handed over within
+                                                agreed timeline</p>
+                                        </div>
+                                    </div>
+                                    <div class="lp-card__media">
+                                        <img src="assets/images/local-projects_img2.webp"
+                                            alt="Warehouse roof insulation in Dubai Industrial Area"
+                                            class="lp-card__img" width="587" height="368" loading="lazy">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="local-projects__controls">
+                        <button type="button" class="lp-nav lp-nav--prev" aria-label="Previous project">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M19 12H5" />
+                                <path d="m12 19-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <div class="lp-pagination"></div>
+                        <button type="button" class="lp-nav lp-nav--next" aria-label="Next project">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <div class="faq__grid">
+                    <h2 class="section-title faq__title">FAQ &mdash; PU foam insulation</h2>
+                    <p class="faq__subtitle">The service life of waterproofing is not defined after completion &mdash;
+                        it is formed during execution.</p>
+
+                    <div class="faq__list">
+                            <div class="faq-item is-open">
+                                <button type="button" class="faq-item__head" aria-expanded="true"
+                                    aria-controls="spf-faq-a1">
+                                    <span class="faq-item__icon">
+                                        <svg class="faq-item__icon-plus" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 5V19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M5 12H19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                        <svg class="faq-item__icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M16.9502 7.05029L7.0507 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M7.0498 7.05029L16.9493 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="faq-item__question">Can SPF be applied in Dubai summer temperatures?</span>
+                                </button>
+                                <div class="faq-item__answer" id="spf-faq-a1">
+                                    <div class="faq-item__answer-inner">
+                                        
+                                        <p>Yes, with correct component temperature management. We plan outdoor application times to maintain material performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button type="button" class="faq-item__head" aria-expanded="false"
+                                    aria-controls="spf-faq-a2">
+                                    <span class="faq-item__icon">
+                                        <svg class="faq-item__icon-plus" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 5V19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M5 12H19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                        <svg class="faq-item__icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M16.9502 7.05029L7.0507 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M7.0498 7.05029L16.9493 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="faq-item__question">Does foam need UV protection outdoors?</span>
+                                </button>
+                                <div class="faq-item__answer" id="spf-faq-a2">
+                                    <div class="faq-item__answer-inner">
+                                        <!-- TODO: replace with final copy -->
+                                        <p>Yes. Exposed foam degrades under UV, so all external applications are finished with a UV-resistant protective coating.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button type="button" class="faq-item__head" aria-expanded="false"
+                                    aria-controls="spf-faq-a3">
+                                    <span class="faq-item__icon">
+                                        <svg class="faq-item__icon-plus" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 5V19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M5 12H19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                        <svg class="faq-item__icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M16.9502 7.05029L7.0507 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M7.0498 7.05029L16.9493 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="faq-item__question">Can it be applied over an existing roof?</span>
+                                </button>
+                                <div class="faq-item__answer" id="spf-faq-a3">
+                                    <div class="faq-item__answer-inner">
+                                        <!-- TODO: replace with final copy -->
+                                        <p>In most cases yes, provided the existing surface is sound, dry and properly prepared. We confirm this on inspection.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button type="button" class="faq-item__head" aria-expanded="false"
+                                    aria-controls="spf-faq-a4">
+                                    <span class="faq-item__icon">
+                                        <svg class="faq-item__icon-plus" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 5V19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M5 12H19" stroke="#525A6B" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                        <svg class="faq-item__icon-close" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M16.9502 7.05029L7.0507 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                            <path d="M7.0498 7.05029L16.9493 16.9498" stroke="white" stroke-width="2"
+                                                stroke-linecap="square" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="faq-item__question">We are planning new construction &mdash; is SPF the right choice?</span>
+                                </button>
+                                <div class="faq-item__answer" id="spf-faq-a4">
+                                    <div class="faq-item__answer-inner">
+                                        <!-- TODO: replace with final copy -->
+                                        <p>It is well suited to new build, where insulation and waterproofing can be specified together as a single roof system.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+                        <div class="container">
+                            <!-- Footer Orange CTA Card -->
+                            <div class="footer-cta">
+                                <div class="footer-cta__content">
+                                    <h2 class="footer-cta__title footer-cta__title--desktop">Ready to discuss your project?</h2>
+                                    <h2 class="footer-cta__title footer-cta__title--mobile">Tell us about your project</h2>
+                                    <p class="footer-cta__description">Send us drawings, a BOQ or a project description. We will
+                                        review the scope and get back to you.</p>
+                                </div>
+                                <div class="footer-cta__actions">
+                                    <a href="#contact" class="footer-cta__btn">
+                                        <span class="footer-cta__btn-text footer-cta__btn-text--desktop">Fill in the Contact
+                                            Form</span>
+                                        <span class="footer-cta__btn-text footer-cta__btn-text--mobile">Describe Your
+                                            Project</span>
+                                        <span class="footer-cta__btn-icon">
+                                            <img src="assets/images/arrow-up-right.svg" alt="arrow-up-right.svg" width="60"
+                                                height="60" loading="lazy">
+                                        </span>
+                                    </a>
+                                    <a href="https://wa.me/971582559902" class="footer-cta__btn" target="_blank">
+                                        <span class="footer-cta__btn-text footer-cta__btn-text--green">+971 58 255 9902</span>
+                                        <span class="footer-cta__btn-icon">
+                                            <img src="assets/images/footer_watsapp.webp" alt="WhatsApp"
+                                                class="footer-cta__whatsapp-icon" width="60" height="60" loading="lazy">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Footer Columns -->
+                            <div class="footer-grid">
+                                <!-- Info Column -->
+                                <div class="footer-col footer-col--info">
+                                    <p class="footer-info-text">Polyurea waterproofing and SPF insulation solutions for
+                                        commercial,
+                                        industrial and residential projects across Dubai and the UAE.</p>
+                                    <div class="footer-copyright">
+                                        <span>&copy; 2009-2026 DANKETPLUS</span>
+                                        <div class="footer-legal-links">
+                                            <a href="#" class="footer-link">Privacy Policy</a>
+                                            <a href="#" class="footer-link">Terms of Service</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Services Column -->
+                                <div class="footer-col footer-col--services">
+                                    <h4 class="footer-col-title">Services</h4>
+                                    <ul class="footer-col-list">
+                                        <li><a href="#" class="footer-link">SPF Insulation</a></li>
+                                        <li><a href="#" class="footer-link">Polyurea Waterproofing</a></li>
+                                        <li><a href="#" class="footer-link">SPF + Polyurea System</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Company Column -->
+                                <div class="footer-col footer-col--company">
+                                    <h4 class="footer-col-title">Company</h4>
+                                    <ul class="footer-col-list">
+                                        <li><a href="#" class="footer-link">Projects</a></li>
+                                        <li><a href="#" class="footer-link">Why Choose Us</a></li>
+                                        <li><a href="#" class="footer-link">How We Work</a></li>
+                                        <li><a href="#" class="footer-link">Contacts</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Contacts Card Column -->
+                                <div class="footer-col footer-col--contacts">
+                                    <div class="footer-contacts-card">
+                                        <ul class="footer-contacts-list">
+                                            <li class="footer-contacts-item">
+                                                <div class="bullet-block">
+                                                    <span class="footer-contacts-bullet"></span>
+                                                    <span class="footer-contacts-label">WhatsApp / Phone:</span>
+                                                </div>
+                                                <div class="footer-contacts-content">
+                                                    <a href="https://wa.me/971582559902" class="footer-contacts-value"
+                                                        target="_blank">+971 58 255 9902</a>
+
+                                                </div>
+                                            </li>
+                                            <li class="footer-contacts-item">
+                                                <div class="bullet-block">
+                                                    <span class="footer-contacts-bullet"></span>
+                                                    <span class="footer-contacts-label">Email:</span>
+                                                </div>
+
+                                                <div class="footer-contacts-content">
+                                                    <a href="mailto:info@danketplus.ru"
+                                                        class="footer-contacts-value">info@danketplus.ru</a>
+                                                </div>
+                                            </li>
+                                            <li class="footer-contacts-item">
+                                                <div class="bullet-block">
+                                                    <span class="footer-contacts-bullet"></span>
+                                                    <span class="footer-contacts-label">Instagram:</span>
+                                                </div>
+                                                <div class="footer-contacts-content">
+                                                    <a href="https://instagram.com/danketplus.ae" class="footer-contacts-value"
+                                                        target="_blank">@danketplus.ae</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Translucent Giant Logo Background -->
+                            <div class="footer-bg-logo">
+                                <img src="assets/images/footer-logo1.svg" alt="DANKET" class="footer-bg-logo__text" width="982"
+                                    height="184" loading="lazy">
+                                <img src="assets/images/footer-logo2.svg" alt="+" class="footer-bg-logo__plus" width="191"
+                                    height="184" loading="lazy">
+                            </div>
+                        </div>
+                    </footer>
+
     </div>
 
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/vendor/swiper-bundle.min.js" defer></script>
+    <script defer>
+        window.addEventListener('load', function () {
+            if (typeof Swiper === 'undefined') return;
+            new Swiper('.local-projects__slider', {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                grabCursor: true,
+                autoHeight: true,
+                navigation: { prevEl: '.lp-nav--prev', nextEl: '.lp-nav--next' },
+                pagination: { el: '.lp-pagination', clickable: true }
+            });
+        });
+    </script>
 </body>
 
 </html>

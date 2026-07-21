@@ -1,36 +1,14 @@
-@font-face {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../fonts/golos-text-400.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Self-hosted fonts (latin subset only — the site is English).
+   Replaces the async Google Fonts request that caused a visible
+   fallback-font flash and reflow on every uncached page load. */
 
+/* Golos Text ships as a variable font: one file covers 400-700. */
 @font-face {
     font-family: 'Golos Text';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400 700;
     font-display: swap;
-    src: url('../fonts/golos-text-500.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('../fonts/golos-text-600.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('../fonts/golos-text-700.woff2') format('woff2');
+    src: url('../fonts/golos-text.woff2') format('woff2-variations');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
