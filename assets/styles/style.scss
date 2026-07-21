@@ -2817,6 +2817,20 @@ body {
         @media (max-width: 480px) {
             grid-template-columns: 1fr;
         }
+
+        // Opt-in column-major fill. DOM order stays the mobile reading order,
+        // and the two-column layouts fill down each column instead of across,
+        // so card 2 lands bottom-left rather than top-right.
+        // Opt-in because the polyurea page relies on the default row fill.
+        &--col-flow {
+            grid-auto-flow: column;
+            grid-template-rows: repeat(2, 1fr);
+
+            @media (max-width: 480px) {
+                grid-auto-flow: row;
+                grid-template-rows: none;
+            }
+        }
     }
 
     &__right {
@@ -2893,11 +2907,6 @@ body {
         letter-spacing: -0.24px;
         text-transform: uppercase;
         margin: 0;
-
-        @media (max-width: 1024px) {
-            font-size: 20px;
-            letter-spacing: -0.2px;
-        }
     }
 }
 
@@ -3157,6 +3166,15 @@ body {
             letter-spacing: -0.24px;
         }
     }
+
+    // SPF page variant: light panel with dark type instead of the blue panel
+    &--spf {
+        background-color: #F4F6F8;
+
+        .apply-section__title {
+            color: var(--txt-primary, #2D323B);
+        }
+    }
 }
 
 .apply-grid {
@@ -3226,15 +3244,19 @@ body {
     }
 
     &__title {
-        font-family: $font-secondary;
+        color: var(--txt-primary, #2D323B);
+        font-family: "Titillium Web";
         font-size: 24px;
+        font-style: normal;
         font-weight: 600;
-        color: #2D323B;
+        line-height: 110%;
+        /* 26.4px */
+        letter-spacing: -0.24px;
         text-transform: uppercase;
+
         margin: 0 0 16px 0;
         padding-bottom: 16px;
         border-bottom: 1px solid #DBDEE4;
-        letter-spacing: -0.24px;
 
         @media (max-width: 768px) {
             font-size: 20px;
@@ -3282,6 +3304,119 @@ body {
         height: 100%;
         object-fit: cover;
         display: block;
+    }
+
+    // --- SPF page variants (additive; the polyurea cards are untouched) ---
+
+    // Small "● THE MOST POPULAR" eyebrow above the title
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--txt-secondary, #525A6B);
+        font-family: $font-primary;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.55px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #F26522;
+            flex-shrink: 0;
+        }
+    }
+
+    // Closing line, separated from the body copy by a rule
+    // Closing line — type matches .apply-card__text
+    &__footer {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 16px 0 0 0;
+        padding-top: 16px;
+        border-top: 1px solid #DBDEE4;
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    // Two-up cards: media sized to the 584x234 asset. Type is inherited.
+    &--spf {
+        .apply-card__media {
+            height: 234px;
+
+            @media (max-width: 950px) {
+                height: 220px;
+            }
+
+            @media (max-width: 480px) {
+                height: 169px;
+            }
+        }
+    }
+
+    // Featured card: full-bleed image with the copy floated over it.
+    // Does not use --full, so it never competes with that modifier's rules.
+    &--overlay {
+        grid-column: span 2;
+        position: relative;
+        display: block;
+
+        @media (max-width: 950px) {
+            grid-column: span 1;
+        }
+
+        .apply-card__media {
+            width: 100%;
+            height: 390px; // matches the 1200x390 asset
+            margin-top: 0;
+            border-radius: 16px;
+
+            @media (max-width: 950px) {
+                height: 300px;
+            }
+
+            @media (max-width: 768px) {
+                height: 200px;
+            }
+        }
+
+        .apply-card__info {
+            position: absolute;
+            top: 24px;
+            bottom: 24px;
+            left: 24px;
+            width: 584px;
+            max-width: calc(100% - 48px);
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            justify-content: center;
+        }
+
+        // below tablet the copy drops out of the image and stacks beneath it
+        @media (max-width: 768px) {
+            .apply-card__info {
+                position: static;
+                width: auto;
+                max-width: none;
+                border-radius: 0;
+                padding: 16px;
+            }
+        }
     }
 }
 
@@ -4037,16 +4172,19 @@ body {
     overflow: hidden;
 }
 
+// Card geometry is taken from the 1920px design frame (1600px content column)
+// scaled to this site's 1200px container: factor 0.75.
+//   design 347x460 -> 260x345   |  gap 27 -> 20
 .orders__slide {
-    width: 270px;
+    width: 260px;
     height: auto;
 
     @media (max-width: 1024px) {
-        width: 250px;
+        width: 252px;
     }
 
     @media (max-width: 768px) {
-        width: 250px;
+        width: 180px;
     }
 }
 
@@ -4059,12 +4197,15 @@ body {
 .orders-card__img {
     display: block;
     width: 100%;
-    height: 358px;
+    height: 345px;
     object-fit: cover;
     border-radius: 16px;
 
-    @media (max-width: 1024px) {
-        height: 356px;
+    // The mobile design uses a distinctly taller, narrower card (180x382)
+    // rather than the ~0.75 ratio used from 769px up.
+    @media (max-width: 768px) {
+        height: 382px;
+        border-radius: 12px;
     }
 }
 
@@ -4635,4 +4776,466 @@ body {
 
 .local-projects__slider .swiper-slide {
     width: 100%;
+}
+
+// --- Solutions Used In Europe / One System (PU Foam page) ---
+// Self-contained namespace: no selector here is shared with another page.
+.solutions {
+    margin-bottom: 100px;
+    background-color: #739EC9;
+    padding: 100px 0 0; // no bottom padding — the building image sits flush
+    overflow: hidden; // clips the image bleed
+    position: relative;
+
+    @media (max-width: 1024px) {
+        padding-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    // Title left / intro copy right, on the same rhythm as the card grid below
+    &__head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+
+    &__title {
+        color: #FFFFFF;
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width: 1024px) {
+            font-size: 28px;
+            letter-spacing: -0.28px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+        }
+    }
+
+    &__description {
+        color: #FFFFFF;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0;
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+
+    // 588px cards on a 1200px container => a 24px gutter
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+}
+
+.solution-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 588 / 287; // matches the asset, so the title always sits on image
+    display: block;
+
+    @media (max-width: 480px) {
+        border-radius: 12px;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__title {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #FFFFFF;
+        font-family: $font-secondary;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.24px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 24px;
+        box-sizing: border-box;
+
+        @media (max-width: 480px) {
+            font-size: 18px;
+            letter-spacing: -0.18px;
+            padding: 16px;
+        }
+    }
+}
+
+.one-system {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: end;
+    margin-top: 100px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 60px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+
+        @media (max-width: 768px) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        color: #FFFFFF;
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0 0 24px 0;
+
+        @media (max-width: 1024px) {
+            font-size: 28px;
+            letter-spacing: -0.28px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+        }
+    }
+
+    &__lead {
+        color: #FFFFFF;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+        margin: 0 0 16px 0;
+    }
+
+    &__text {
+        color: #FFFFFF;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0 0 16px 0;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+
+    &__badge {
+        margin-top: 149px;
+        align-self: flex-start;
+        border-radius: 16px;
+        background-color: #F3F4F6;
+        padding: 32px;
+        box-sizing: border-box;
+
+        @media (max-width: 480px) {
+            padding: 24px;
+        }
+    }
+
+    &__badge-text {
+        color: #739EC9;
+        font-family: $font-secondary;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width: 480px) {
+            font-size: 18px;
+            letter-spacing: -0.18px;
+        }
+    }
+
+    &__media {
+        align-self: end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @media (max-width: 768px) {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+    }
+
+    &__image {
+        display: block;
+    }
+}
+
+// --- The Heat In Dubai Poses A Real Challenge For Any Roof (PU Foam page) ---
+// Self-contained namespace: no selector here is shared with another page.
+.heat-roof {
+    padding-top: 0;
+    padding-bottom: 100px;
+    background-color: #FFFFFF;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 60px;
+    }
+
+    &__grid {
+        display: grid;
+        // 1200px container - 32px gap = two 584px columns, the image's natural width
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: center;
+
+        >* {
+            min-width: 0;
+        }
+
+        // stack: copy first, image below — matches the tablet and mobile designs
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-secondary;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.36px;
+        text-transform: uppercase;
+        margin: 0 0 16px 0;
+
+        // type scale matched to .why-dubai
+        @media (max-width: 768px) {
+            font-size: 24px;
+            letter-spacing: -0.24px;
+        }
+    }
+
+    &__description {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0 0 24px 0;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #DBDEE4;
+
+        // tablet: two columns filled top-to-bottom, so the DOM order still
+        // reads correctly when it collapses to one column on mobile
+        @media (max-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-auto-flow: column;
+            column-gap: 32px;
+            border-top: none;
+        }
+
+        @media (max-width: 480px) {
+            display: block;
+            border-top: 1px solid #DBDEE4;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 0;
+        border-bottom: 1px solid #DBDEE4;
+
+        @media (max-width: 1024px) {
+            border-top: 1px solid #DBDEE4;
+            border-bottom: none;
+        }
+
+        @media (max-width: 480px) {
+            border-top: none;
+            border-bottom: 1px solid #DBDEE4;
+        }
+    }
+
+    &__icon {
+        // icon box matched to .why-dubai__icon-wrapper
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__item-title {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+    }
+
+    &__media {
+        width: 100%;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 100%;
+        // ratio drives the height, so the badge always anchors to the photo edge
+        aspect-ratio: 584 / 440;
+
+        @media (max-width: 1025px) {
+            aspect-ratio: unset;
+            height: 379px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__badge {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        max-width: 380px;
+        border-radius: 12px;
+        background: var(--bg-primary, #FFF);
+        padding: 16px;
+        box-sizing: border-box;
+
+        @media (max-width: 480px) {
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            max-width: none;
+        }
+    }
+
+    &__badge-text {
+        color: var(--txt-primary, #2D323B);
+        font-family: $font-primary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin: 0;
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+}
+
+// Mobile-only title swap for the process section (see pu-foam-insulation.html).
+// Switches at 480px so it lands together with the timeline's own vertical layout.
+.process-title--mobile {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .process-title--desktop {
+        display: none;
+    }
+
+    .process-title--mobile {
+        display: block;
+    }
 }
